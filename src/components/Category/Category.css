@@ -1,0 +1,30 @@
+/*container for category buttons*/
+.categoryBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+
+/*css for each category button design*/
+.categoryButton {
+    font-size: 2em;
+    border: 1px solid black;
+    color: black;
+    margin: 3% 4%;
+    padding: 6%;
+}
+
+/*css for Link or name of category buttons*/
+.categoryName {
+    text-decoration: none;
+    width: 70vw;
+}
+
+.categoryName:hover {
+    background-color: teal;
+}
+
+.categoryName:active {
+    background-color: lightblue;
+}

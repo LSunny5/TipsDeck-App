@@ -1,0 +1,44 @@
+/*container for entire Landing page content*/
+.LandingContent {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    width: 75%;
+}
+
+.landingLogo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 5% auto;
+}
+
+/*description on Landing Page*/
+.description {
+    margin: 10% auto;
+}
+
+/*Let's Go button*/
+.letsGoButton {
+    border-radius: 30px;
+    padding: 3%;
+    background: white;
+    width: 35%;
+    margin: 5%;
+    background: lightgrey;
+    text-decoration: none;
+}
+
+.landingFooter{
+    text-align: right;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+}

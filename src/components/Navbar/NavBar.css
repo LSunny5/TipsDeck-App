@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .desktopNavBar {
+    display: none;
+  }
+  
+  .navBar {
+    width: 100%;
+    background: lightgrey;
+    padding: 5px 0 10px 0;
+  }
+  
+  .logoImage {
+    width: 30px;
+    height: 30px;
+    margin: 10%;
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    display: flex-block;
+    flex-direction: column;
+    height: 15%;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  li > a {
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    height: 100%;
+    width: 100%;
+    margin: 6px auto 0;
+  }
+  
+  .dropButton{
+    background-color: lightgrey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0 0 4px;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: slategray;
+    min-width: 90vw;
+    min-height: 8vh;
+    right: 19px;
+    z-index: 1;
+  }
+  
+  /* Show menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 30px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: darkgray;
+  }
+  
+  .dropdown:hover .dropButton {
+    background-color: gray;
+    width: 60px;
+  }
+  
+  .searchBar {
+    margin: 20px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .searchField {
+    font-size: 1.2em;
+    text-align: left;
+    width: 70%;
+    padding: 3%;
+  }
+  
+  .searchButton {
+    font-size: 1em;
+    margin: 0;
+    padding: 2.5%;
+    width: 18%;
+  }

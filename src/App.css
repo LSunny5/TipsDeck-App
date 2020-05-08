@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+}
+
+/*container for all app content*/
+main {
+    height: 100vh;
+    text-align: center;
+}
+
+/*Container for footer*/
+.footerBox {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

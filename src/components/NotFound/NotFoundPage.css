@@ -1,0 +1,15 @@
+/*Page not found styling*/
+.notFound {
+    width: 80%;
+    margin: 30% auto;
+    height: 100%;
+}
+
+.notFoundTitle {
+    color: red;
+}
+
+/*page not found message*/
+.notFoundError {
+    font-size: 2em;
+}
