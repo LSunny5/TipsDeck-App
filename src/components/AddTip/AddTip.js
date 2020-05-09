@@ -23,11 +23,11 @@ class AddTip extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const newId = this.context.tips.length + 50;
+        const newId = (this.context.tips.length + 50).toString();
        // const { Category, TipName, description, directions, sourceName, sourceURL } = event.target;
 
         const newTip = [{
-                /* id: newId.toString(),
+                /* id: newId,
                 category: Category.value,
                 name: TipName.value,
                 description: description.value,
@@ -50,7 +50,6 @@ class AddTip extends React.Component {
         const catName = getCategoryName(this.context.categories, event.target['Category'].value);
 
 
-
       //      console.log(newTip );
 
         this.context.addTip(newTip);
@@ -63,7 +62,7 @@ class AddTip extends React.Component {
         //console.log(Category.value +  ' category');
 
         
-        this.props.history.push(`/Category/${catName.name}/${newTip.id}`);
+        this.props.history.push(`/Category/${catName.name}/${newId}`);
     };
 
     render() {

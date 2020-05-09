@@ -49,7 +49,7 @@ class App extends React.Component {
     console.log(this.state.tips);
     console.log('here tips ');
 
-    //this.setState({tips: this.state.tips.push.apply(this.state.tips,tip)});
+    this.setState({tips: (this.state.tips.push.apply(this.state.tips,tip))});
     
     // this.state.tips.concat(tip);
 
