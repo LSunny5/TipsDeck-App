@@ -1,0 +1,45 @@
+.AddTipContent{
+    width: 90%;
+    margin: 0 auto;
+}
+
+legend {
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 3%;
+}
+
+#Category {
+    font-size: 1em;
+    width: 65%;
+    border: 1px solid black;
+}
+
+.inputLabel {
+    text-align: left;
+}
+
+.addForm {
+    text-align: left;
+    font-size: 1em;
+}
+
+.inputAdd {
+    margin: 10px;
+    border: 1px solid black;
+    font-size: 1em;
+    width: 60%;
+  }
+
+.sourceText {
+    height: 5rem;
+}
+
+
+  
+  
+ 
+  
+  
+  
+  

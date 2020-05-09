@@ -1,0 +1,79 @@
+.TipContainer {
+    width: 85%;
+    margin: 20px auto;
+
+}
+
+.ratingAverage {
+    margin: 10px;
+}
+
+.rateMessage {
+    margin-top:10px;
+    font-weight: bolder;
+}
+
+.starBox {
+    margin: 0 10px 10px;
+}
+
+.tipTitle {
+    font-size: 2em;
+}
+
+.catName {
+    font-size: 1.5em;
+}
+
+.tipText {
+    text-align: left;
+    margin: 10px;
+}
+
+.tipDirections {
+    text-align: left;
+    margin: 20px;
+}
+
+.lefttext {
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sourceBox {
+    margin: 20px;
+}
+
+.wordBreak {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.buttonBox {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.deleteTipButton {
+    background: lightcoral;
+    border: 1px solid black;
+    box-shadow: none;
+    padding: 13px;
+    width: 75px;
+}
+
+.editTipButton {
+    background: white;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    width: 80px;
+}

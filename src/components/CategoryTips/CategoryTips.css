@@ -1,0 +1,47 @@
+.CategoryTipsBox {
+    margin: 3%;
+    padding: 2%;
+}
+
+.TipsBox {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tName {
+    font-size: 1.6em;
+    padding: 5%;
+    margin-bottom: 3%;
+}
+
+.TipLink {
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 2%;
+    text-decoration: none;
+    color: black;
+    width: 80%;
+    height: 200px;
+}
+
+.TipLink:hover {
+    background: lightblue;
+}
+
+.TipLink:active {
+    background: paleturquoise;
+}
+
+/* tip description css */
+.tipDesc {
+    max-height: 5rem;
+    /* line clamping so ellipsis is used after 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

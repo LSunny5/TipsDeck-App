@@ -20,7 +20,10 @@ class Category extends React.Component {
                             <Link key={category.id}
                                 to={{
                                     pathname: `/Category/${category.name}`, 
-                                    state: category.name
+                                    //send id of category to be used for list of tips
+                                    state: {
+                                        catId: category.id
+                                    }
                                 }}
                                 className="categoryName">
                                 <div className="categoryButton">
