@@ -8,6 +8,6 @@ test('renders learn react link', () => {
     <BrowserRouter>
       <App />
     </BrowserRouter>);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/Let's/i);
   expect(linkElement).toBeInTheDocument();
 });
