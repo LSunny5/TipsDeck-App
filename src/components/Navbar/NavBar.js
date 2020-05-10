@@ -1,9 +1,33 @@
 import React from 'react';
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
+import TipsDeckContext from '../../TipsDeckContext';
+import Tipcard from '../TipCard/Tipcard'
 
 class NavBar extends React.Component {
+    static contextType = TipsDeckContext;
+    constructor() {
+        super();
+        this.state = {
+            search: ''
+        };
+    }
+
+    updateSearch(event) {
+        this.setState({ search: event.target.value.substr(0, 20) });
+    }
+
+
     render() {
+        let term = this.state.search.toLowerCase().trim();
+        let filteredTips = this.context.tips.filter(tip => {
+            return (
+                (tip.description.toLowerCase().indexOf(term) !== -1)
+                || (tip.name.toLowerCase().indexOf(term) !== -1)
+                || (tip.directions.toLowerCase().indexOf(term) !== -1)
+            );
+        })
+
         return (
             <nav role="navigation" className="navBar">
                 <button
@@ -26,12 +50,39 @@ class NavBar extends React.Component {
                             <img alt="Search Logo" src="/images/MagnifyingIcon.png" className="logoImage" />
                         </button>
                         <div className="dropdown-content">
-                            <form className="searchBar" action="SearchResults.html">
-                                <input type="text" placeholder=" Search for tips here..." name="search" className="searchField" />
-                                <button type="submit" className="searchButton" onClick={() => this.props.push(`/SearchResults`)}>
-                                    <img alt="Search Logo" src="/images/MagnifyingIcon.png" className="searchImage" />
-                                </button>
-                            </form>
+
+                            <div className="searchBar">
+                                <input
+                                    type="text"
+                                    value={this.state.search}
+                                    placeholder=" Search for tips here..."
+                                    name="search"
+                                    className="searchField"
+                                    onChange={this.updateSearch.bind(this)}
+                                />
+                            </div>
+                            <div className="searchResultsBox">
+                                {filteredTips.map((tip) => {
+                                    return (
+                                        <Tipcard
+                                            key={tip.id}
+                                            id={tip.id}
+                                            name={tip.name}
+                                            cat={tip.category}
+                                        />
+                                    )
+                                })
+                                }
+                            </div>
+                            
+                            {/* 
+                            ***Maybe implement later to make dynamic search page
+
+                            <NavLink to={`/SearchResults`}>
+                                Search Page
+                            </NavLink> */}
+
+
                         </div>
                     </div>
                     <div className="buttonName">Search</div>

@@ -53,11 +53,12 @@ class EditTip extends React.Component {
         const {id, name} = this.props.match.params;
 
         const changedNote = {
+            id: id, 
             category: event.target['Category'].value,
             name: event.target['TipName'].value,
             description: event.target['description'].value,
-           /*  directions: this.state.directions,
-            sourceURL: this.state.sourceURL, */
+            directions: event.target['directions'].value,
+           // sourceURL: event.target['source'].value,
         }
 
         this.context.editTip(changedNote);

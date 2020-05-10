@@ -99,6 +99,18 @@
   width: 15px;
   height: 15px;
 }
+
+.searchResultsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto; 
+  width: 100%;
+}
+
+
+
 /*
 
  

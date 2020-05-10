@@ -6,15 +6,6 @@ import { getCategoryName } from '../../TipsDeckHelpers';
 
 class AddTip extends React.Component {
     static contextType = TipsDeckContext;
-    
-    /* state = {
-        category: '',
-        name: '',
-        description: '',
-        directions: '',
-        sourceTitle: '',
-        sourceURL: '',
-    } */
 
     handleUpdate = event => {
         const { title, value } = event.target;
@@ -23,50 +14,28 @@ class AddTip extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        const newId = (this.context.tips.length + 50).toString();
-       // const { Category, TipName, description, directions, sourceName, sourceURL } = event.target;
+        const newId = new Date().getTime();
 
-        const newTip = [{
-                /* id: newId,
-                category: Category.value,
-                name: TipName.value,
-                description: description.value,
-                directions: directions.value,
-                sourceTitle: sourceName.value,
-                sourceURL: sourceURL.value,
-                rating: 0, 
-                numRaters: 0 */
-               // numRaters: 0,
-               // rating: 0
-                id: newId.toString(),
-                category: event.target['Category'].value,
-                name: event.target['TipName'].value,
-                description: event.target['description'].value,
-                directions: event.target['directions'].value,
-                sourceTitle: event.target['sourceName'].value,
-                sourceURL: event.target['sourceURL'].value
-            }]
-        
+        const newTip = {
+            id: newId.toString(),
+            category: event.target['Category'].value,
+            name: event.target['TipName'].value,
+            description: event.target['description'].value,
+            directions: event.target['directions'].value,
+            sourceTitle: event.target['sourceName'].value,
+            sourceURL: event.target['sourceURL'].value,
+            rating: 0,
+            numRaters: 0
+        }
+
         const catName = getCategoryName(this.context.categories, event.target['Category'].value);
 
-
-      //      console.log(newTip );
-
         this.context.addTip(newTip);
-
-        
-        console.log(this.context.tips);
-        console.log(' newest tips')
-    
-        
-        //console.log(Category.value +  ' category');
-
-        
         this.props.history.push(`/Category/${catName.name}/${newId}`);
     };
 
     render() {
-        const { categories = []} = this.context;
+        const { categories = [] } = this.context;
 
         return (
             <section className="AddTipContent">
@@ -154,26 +123,8 @@ class AddTip extends React.Component {
                                 Cancel
                         </NavLink>
                         </div>
-
                     </form>
                 </section>
-
-                {/* 
-                    
-                        
-                            
-                            
-                            
-                                    <label for="description" class="AddLabel">Description: </label>
-                                    <Textarea id="description" name="description" class="AddLabel" placeholder="Describe the tip here..."></Textarea><br>
-                                        <label for="directions" class="AddLabel">Directions: </label>
-                                        <Textarea id="directions" name="directions" class="AddLabel" placeholder="Enter directions for tip here..."></Textarea><br>
-                                            <label for="source" class="AddLabel">Source URL: </label>
-                                            <input type="text" id="source" name="source" class="inputAdd" placeholder="ex. www.randomsite.com"><br>
-                                                
-
-        
-      */}
             </section>
         );
     }

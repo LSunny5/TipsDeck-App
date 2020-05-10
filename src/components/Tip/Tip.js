@@ -3,14 +3,18 @@ import './Tip.css';
 import TipsDeckContext from '../../TipsDeckContext';
 import { findTip, getCategoryName } from '../../TipsDeckHelpers';
 import { NavLink } from 'react-router-dom'
+import Rating from '../Rating/Rating';
 
 class Tip extends React.Component {
     static contextType = TipsDeckContext;
 
-    handleClickDelete = () => {
-        const { name, id } = this.props.match.params;
+    handleClickDelete = (cName) => {
+        const { id } = this.props.match.params;
         this.context.deleteTip(id)
-        this.props.history.push(`/Category/${name}`)
+ 
+
+
+        this.props.history.push(`/Category/${cName}`)
     }
 
     handleClickCancel = () => {
@@ -27,11 +31,9 @@ class Tip extends React.Component {
             <section className="TipContainer">
                 <h1 className="tipTitle">{targetTip.name}</h1>
                 <h2 className="catName">{cat.name}</h2>
-                <p className="ratingAverage">
-                    Rating: {targetTip.rating} stars
-                </p>
-                <p className="rateMessage">Rate it!</p>
-                <div className="starBox">stars here</div>
+                
+                <Rating value={targetTip.rating} />            
+
                 <div className="tipText">
                     <p className="bold lefttext">Description: </p>
                     {targetTip.description}
@@ -59,7 +61,7 @@ class Tip extends React.Component {
                         className="deleteTipButton"
                         type='button'
                         onClick={() => {
-                            if (window.confirm('Are you sure you wish to delete the tip?') ? this.handleClickDelete() : this.handleClickCancel())
+                            if (window.confirm('Are you sure you wish to delete the tip?') ? this.handleClickDelete(cat.name) : this.handleClickCancel())
                                 this.handleClickCancel()
                         }}
                         aria-pressed='false'

@@ -42,23 +42,9 @@ class App extends React.Component {
 
   //add a tip
   addTip = tip => {
-    //this.setState({ tips: [...this.state.tips, tip] });
-    console.log(tip);
-    console.log('here is the tip from function ' )
-
-    console.log(this.state.tips);
-    console.log('here tips ');
-
-    this.setState({tips: (this.state.tips.push.apply(this.state.tips,tip))});
-    
-    // this.state.tips.concat(tip);
-
-    // this.setState({tips: [...newArray]});
-
-    //this.setState({ tips: [...this.state.tips, [tip]] });
-  
-    console.log(this.state.tips);
-    console.log('tips from app')
+    //alternative to using the spread
+    //this.setState({ tips: this.state.tips.concat(tip)});
+    this.setState({ tips: [...this.state.tips, tip] });
   };
 
 

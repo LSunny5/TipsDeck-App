@@ -13,7 +13,11 @@ class Random extends React.Component {
         temp = shuffleArray(temp);
 
         
-        /* let tempId;
+        /* 
+        need to figure out how to get category name instead of id to redirect
+        to correct page
+        
+        let tempId;
         let findCat = findTip(tips, tempId);
         let a = getCategoryName(categories, findCat.category)
         let catName = a.name; */
