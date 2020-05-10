@@ -25,10 +25,6 @@ class App extends React.Component {
     tips: [],
   };
 
-
-
-
-
   //load the dummy file values
   componentDidMount() {
     setTimeout(() => this.setState(dummyStore), 600);
@@ -47,22 +43,12 @@ class App extends React.Component {
     this.setState({ tips: [...this.state.tips, tip] });
   };
 
-
-
-
-  
-
   //edit a tip
   editTip = editedTip => {
     const newArray = this.state.tips.map(tip =>
       tip.id !== editedTip.id ? tip : editedTip);
     this.setState({ tips: newArray });
   }
-
-
-
-
-  
 
   //routes for the navigation bar
   renderNavRoutes() {
@@ -143,9 +129,6 @@ class App extends React.Component {
       deleteTip: this.deleteTip,
       addTip: this.addTip,
       editTip: this.editTip,
-
-
-
     };
 
     return (

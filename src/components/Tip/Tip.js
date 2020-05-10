@@ -11,9 +11,6 @@ class Tip extends React.Component {
     handleClickDelete = (cName) => {
         const { id } = this.props.match.params;
         this.context.deleteTip(id)
- 
-
-
         this.props.history.push(`/Category/${cName}`)
     }
 

@@ -7,46 +7,11 @@ import { NavLink } from 'react-router-dom';
 //Edit the Tip Information
 class EditTip extends React.Component {
     static contextType = TipsDeckContext;
-    constructor(props) {
-        super(props);
-        this.state = {
-            TipName: {
-                value: '',
-                touched: false
-            },
-            Category: {
-                value: '',
-                touched: false
-            },
-            descriptions: {
-                value: '',
-                touched: false
-            },
-        }
+    
+    handleUpdate = event => {
+        const { title, value } = event.target;
+        this.setState({ [title]: value.trim() });
     }
-
-    updateName(name) {
-        this.setState({ TipName: { value: name, touched: true } });
-    }
-
-    updateCategory(category) {
-        this.setState({ Category: { value: category, touched: true } });
-    }
-
-    updateDesc(desc) {
-        this.setState({ description: { value: desc, touched: true } });
-    }
-
-   
-
-
-
-
-    handleChange = event => {
-		const { name, value } = event.target;
-		this.setState({ [name]: value });
-	};
-
 
     handleClickEdit = event => {
         event.preventDefault();
@@ -58,18 +23,17 @@ class EditTip extends React.Component {
             name: event.target['TipName'].value,
             description: event.target['description'].value,
             directions: event.target['directions'].value,
-           // sourceURL: event.target['source'].value,
+            sourceTitle: event.target['sourceName'].value,
+            sourceURL: event.target['sourceurl'].value,
+            rating: event.target['rating'].value,
+            numRaters: event.target['raters'].value,
         }
 
         this.context.editTip(changedNote);
         this.props.history.push(`/Category/${name}/${id}`);
-
-
-        //this.props.history.push('/');
     }
 
     handleClickCancel = () => {
-        //this.props.history.goBack();
         const {id, name} = this.props.match.params;
         this.props.history.push(`/Category/${name}/${id}`);
         alert('Tip was not edited.');
@@ -95,14 +59,14 @@ class EditTip extends React.Component {
                         className="inputEdit"
                         required
                         defaultValue={tipEdit.name}
-                        onChange={e => this.updateName(e.target.value)}
+                        onChange={this.handleUpdate}
                     />
                     <br />
                     <label htmlFor="Category" className="inputLabel">Category: </label>
                     <select id="Category" className="inputEdit"
                         defaultValue={catForTip.id}
                         required
-                        onChange={e => this.updateCategory(e.target.value)}
+                        onChange={this.handleUpdate}
                     >
                         {categories.slice(0, categories.length - 1).map(category =>
                             <option
@@ -116,21 +80,63 @@ class EditTip extends React.Component {
                     <br />
                     <label htmlFor="description" className="inputLabel">Description: </label>
                     <br />
-                    <textarea id="description" name="description" defaultValue={tipEdit.description} onChange={e => this.updateDesc(e.target.value)}></textarea>
+                    <textarea 
+                        id="description" 
+                        name="description" 
+                        defaultValue={tipEdit.description} 
+                        onChange={this.handleUpdate}
+                    />
                     <br />
                     <label htmlFor="directions" className="inputLabel">Directions: </label>
                     <br />
-                    <textarea id="directions" name="directions" defaultValue={tipEdit.directions} onChange={this.handleChange}></textarea>
+                    <textarea 
+                        id="directions" 
+                        name="directions" 
+                        defaultValue={tipEdit.directions} 
+                        onChange={this.handleUpdate}
+                    />
                     <br />
-                    <label htmlFor="source" className="inputLabel">Source URL: </label>
+                    <label htmlFor="sourceName" className="inputLabel">Source Name: </label>
+                    <input
+                        type="text"
+                        id="sourceName"
+                        name="sourceName"
+                        className="inputEdit"
+                        required
+                        defaultValue={tipEdit.sourceTitle}
+                        onChange={this.handleUpdate}
+                    />  
+                    <br />
+                    <label htmlFor="sourceurl" className="inputLabel">Source URL: </label>
                     <textarea
                         type="text"
-                        id="source"
-                        name="source"
+                        id="sourceurl"
+                        name="sourceurl"
                         className="sourceText"
                         defaultValue={tipEdit.sourceURL}
-                        onChange={this.handleChange}
+                        onChange={this.handleUpdate}
                     />
+                    <br />
+                    <label htmlFor="rating" className="inputLabel">Rating: </label>
+                    <input
+                        type="text"
+                        id="rating"
+                        name="rating"
+                        className="rateCSS"
+                        required
+                        defaultValue={tipEdit.rating}
+                        onChange={this.handleUpdate}
+                    />  
+                    <label htmlFor="raters" className="inputLabel"># of Raters: </label>
+                    <input
+                        type="text"
+                        id="raters"
+                        name="raters"
+                        className="rateCSS"
+                        required
+                        defaultValue={tipEdit.numRaters}
+                        onChange={this.handleUpdate}
+                    />  
                     <br />
                     <div className="buttonBox">
                         <button 
@@ -150,8 +156,6 @@ class EditTip extends React.Component {
                             Cancel
                         </NavLink>
                     </div>
-
-
                 </form>
             </section>
         );

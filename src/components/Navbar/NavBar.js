@@ -17,16 +17,18 @@ class NavBar extends React.Component {
         this.setState({ search: event.target.value.substr(0, 20) });
     }
 
-
     render() {
         let term = this.state.search.toLowerCase().trim();
-        let filteredTips = this.context.tips.filter(tip => {
-            return (
-                (tip.description.toLowerCase().indexOf(term) !== -1)
-                || (tip.name.toLowerCase().indexOf(term) !== -1)
-                || (tip.directions.toLowerCase().indexOf(term) !== -1)
-            );
-        })
+        let filteredTips = [];
+        if (term.length !== 0) {
+            filteredTips = this.context.tips.filter(tip => {
+                return (
+                    (tip.description.toLowerCase().indexOf(term) !== -1)
+                    || (tip.name.toLowerCase().indexOf(term) !== -1)
+                    || (tip.directions.toLowerCase().indexOf(term) !== -1)
+                );
+            })
+        }
 
         return (
             <nav role="navigation" className="navBar">
@@ -42,15 +44,12 @@ class NavBar extends React.Component {
                     <img src="/images/CategoriesIcon.png" alt="Categories Icon" className="logoImage" />
                     <div className="buttonName">Categories</div>
                 </NavLink>
-                <div
-                    className="categoryIcon"
-                    to={`/`}>
-                    <div className="dropdown">
+                <div className="categoryIcon">
+                    <div className="dropdown" >
                         <button className="dropButton">
                             <img alt="Search Logo" src="/images/MagnifyingIcon.png" className="logoImage" />
                         </button>
                         <div className="dropdown-content">
-
                             <div className="searchBar">
                                 <input
                                     type="text"
@@ -81,7 +80,6 @@ class NavBar extends React.Component {
                             <NavLink to={`/SearchResults`}>
                                 Search Page
                             </NavLink> */}
-
 
                         </div>
                     </div>
