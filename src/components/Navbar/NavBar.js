@@ -9,12 +9,17 @@ class NavBar extends React.Component {
     constructor() {
         super();
         this.state = {
-            search: ''
+            search: '',
+            filteredTips: [],
         };
     }
 
     updateSearch(event) {
-        this.setState({ search: event.target.value.substr(0, 20) });
+        this.setState({ search: event.target.value.substr(0, 20) });    
+    }
+    
+    handleClick = () => {
+        this.setState({ search: '' }); 
     }
 
     render() {
@@ -23,8 +28,8 @@ class NavBar extends React.Component {
         if (term.length !== 0) {
             filteredTips = this.context.tips.filter(tip => {
                 return (
-                    (tip.description.toLowerCase().indexOf(term) !== -1)
-                    || (tip.name.toLowerCase().indexOf(term) !== -1)
+                    (tip.tipdescription.toLowerCase().indexOf(term) !== -1)
+                    || (tip.tipname.toLowerCase().indexOf(term) !== -1)
                     || (tip.directions.toLowerCase().indexOf(term) !== -1)
                 );
             })
@@ -53,6 +58,7 @@ class NavBar extends React.Component {
                             <div className="searchBar">
                                 <input
                                     type="text"
+                                    autoComplete="off"
                                     value={this.state.search}
                                     placeholder=" Search for tips here..."
                                     name="search"
@@ -60,27 +66,19 @@ class NavBar extends React.Component {
                                     onChange={this.updateSearch.bind(this)}
                                 />
                             </div>
-                            <div className="searchResultsBox">
+                            <div className="searchResultsBox" onClick={this.handleClick}>
                                 {filteredTips.map((tip) => {
                                     return (
                                         <Tipcard
                                             key={tip.id}
                                             id={tip.id}
-                                            name={tip.name}
-                                            cat={tip.category}
+                                            name={tip.tipname}
+                                            cat={tip.category_id}
                                         />
                                     )
                                 })
                                 }
                             </div>
-                            
-                            {/* 
-                            ***Maybe implement later to make dynamic search page
-
-                            <NavLink to={`/SearchResults`}>
-                                Search Page
-                            </NavLink> */}
-
                         </div>
                     </div>
                     <div className="buttonName">Search</div>

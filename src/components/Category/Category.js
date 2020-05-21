@@ -2,6 +2,7 @@ import React from 'react';
 import './Category.css';
 import { Link } from 'react-router-dom';
 import TipsDeckContext from '../../TipsDeckContext';
+import PropTypes from 'prop-types';
 
 //Shows a list of categories a user may select from
 class Category extends React.Component {
@@ -19,15 +20,11 @@ class Category extends React.Component {
                         categories.map(category =>
                             <Link key={category.id}
                                 to={{
-                                    pathname: `/Category/${category.name}`, 
-                                    //send id of category to be used for list of tips
-                                    state: {
-                                        catId: category.id
-                                    }
+                                    pathname: `/Category/${category.category}`,
                                 }}
                                 className="categoryName">
                                 <div className="categoryButton">
-                                    {category.name}
+                                    {category.category}
                                 </div>
                             </Link>
                         )) : (
@@ -39,5 +36,15 @@ class Category extends React.Component {
         );
     };
 }
+
+Category.propTypes = {
+    categories:
+        PropTypes.arrayOf(
+            PropTypes.shape({
+                id: PropTypes.number.isRequired,
+                category: PropTypes.string.isRequired
+            })
+        ),
+};
 
 export default Category;

@@ -1,15 +1,15 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Footer extends React.Component {
     render() {
         return (
             <footer className="footer">
                 <div className="footerLogo">
-                    <Link to="/">
-                        <img alt="TipsDeck Logo" src='./images/TipsDeckLogo.png' className="footerImage" />
-                    </Link>
+                    <NavLink to="/">     
+                        <img alt="TipsDeck Logo" src={process.env.PUBLIC_URL + '/images/TipsDeckLogo.png'} className="footerImage" />
+                    </NavLink>
                 </div>
                 <div className="footerNote">Created by Sunny Lee</div>
             </footer>

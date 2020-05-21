@@ -2,12 +2,12 @@
 export const getTips = (tips = [], categoryId) => (
     (!categoryId)
         ? tips
-        : tips.filter(tip => tip.category === categoryId)
+        : tips.filter(tip => tip.category_id === categoryId)
 );
 
 //find the tip from tip id
-export const findTip = (tips = [], tipId) =>
-    tips.find(tip => tip.id === tipId);
+export const findTip = (tips = [], tipId) => 
+    tips.find(tip => tip.id === parseInt(tipId));
 
 //get Category name from id
 export const getCategoryName = (categories = [], catId) =>
@@ -15,7 +15,7 @@ export const getCategoryName = (categories = [], catId) =>
 
 //get Category id from name
 export const getCategoryId = (categories = [], catName) =>
-    categories.find(cat => cat.name === catName);
+    categories.find(cat => cat.category === catName);
 
 //shuffle an array tips
 export const shuffleArray = (array) => {

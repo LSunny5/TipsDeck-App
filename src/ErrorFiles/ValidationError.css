@@ -1,0 +1,8 @@
+.error {
+    color: red;
+}
+
+.editButton:disabled {
+    background: white;
+    color: lightgray;
+}

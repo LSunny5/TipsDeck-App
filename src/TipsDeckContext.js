@@ -6,7 +6,4 @@ export default React.createContext({
   deleteTip: () => {}, 
   addTip: () => {},
   editTip: () => {}, 
-
-
-  
 })

@@ -3,6 +3,7 @@ import './Tipcard.css';
 import { Link } from 'react-router-dom';
 import TipsDeckContext from '../../TipsDeckContext'
 import { getCategoryName } from '../../TipsDeckHelpers';
+import PropTypes from 'prop-types';
 
 class Tipcard extends React.Component {
     static contextType = TipsDeckContext;
@@ -27,5 +28,17 @@ class Tipcard extends React.Component {
         )
     }
 }
+
+Tipcard.propTypes = {
+    categories: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        category: PropTypes.string.isRequired,
+      })
+    ),
+    id: PropTypes.number, 
+    name: PropTypes.string, 
+    cat: PropTypes.number,
+  };
 
 export default Tipcard;
