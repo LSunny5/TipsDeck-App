@@ -36,12 +36,9 @@
   font-size: 12px;
 } 
 
-
-
 .dropdown {
   height: 100%;
   width: 100%;
-
 }
 
 .dropButton{
@@ -57,10 +54,8 @@
   position: absolute;
   background-color: slategray;
   min-width: 90vw;
-  min-height: 8vh;
-  right: 19px;
+  right: 0.9rem;
   z-index: 1;
-
 }
 
 /* Show menu on hover */
@@ -101,101 +96,162 @@
 }
 
 .searchResultsBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 10px auto; 
-  width: 100%;
+  width: 80%;
+  overflow-y: auto;
+  max-height: 30rem; 
 }
 
-
-
-/*
-
- 
-for ipads and larger screen sizes*/
-/*@media only screen and (min-width: 600px) {
-  main{
-    margin: 5px;
-  }
-
+/* for tablets */
+@media only screen and (min-width: 600px) {
   .logoImage {
-    width: 40px;
-    height: 40px;
-  }
-
-  .dropdown {
-    margin: 12px auto 0;
-  }
-
-  .dropButton{
-    padding: 0 0 10px;
+    width: 50px;
+    height: 50px;
   }
 
   .dropdown-content {
     right: 35px;
   }
 
-  .dropdown:hover .dropButton {
-    width: 80px;
-  }
-
   .searchField {
     font-size: 1.6em;
     width: 75%;
-    padding: 3%;
-  }
-
-  .searchButton {
-    font-size: 1.5em;
-    width: 18%;
-  }
-
-  .footerImage {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-/*for desktops*/
-/*@media only screen and (min-width: 1100px) {
-  .navBar {
-    display: none;
-  }
-
-  .desktopNavBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background: lightgrey;
-  }
-
-  .navSec1 {
-    position: absolute;
-    left: 0;
-    margin: 10px 20px 0;
-  }
-
-  .links {
-    position: absolute;
-    right: 0;
-    margin: 2% 3% 0 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 15%;
-  }
-
-  .searchSection {
-    width: 35%;
-    font-size: 0.8em;
-    margin: 0;
+    border-radius: 10px;
   }
 
   .searchBar {
-    margin: 1.5%;
+    width: 100%;
+    margin: auto;
+    margin-top: 0.7rem;
   }
-} */
+
+  .searchResultsBox {
+    display: block;
+    background-color: none;
+    width: 56%;
+    overflow-y: auto;
+    max-height: 30rem;
+  }
+
+  .cardName {
+    margin: 0
+  }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+  .logoImage {
+    width: 25px;
+    height: 25px;
+    border: none;
+  }
+
+  .categoryIcon {
+    border: none;
+    width: 9%;
+    padding: 2em;
+  }
+
+  .navBar {
+    display: inline-flex;
+    flex-direction: row;
+    height: 6rem;
+  }
+
+  .backButton {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    margin: 0;
+    width: 75px;
+    height: 75px;
+    top: 1em;
+    padding: 0;
+  }
+
+  .buttonName {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+  .catButton {
+    position: absolute;
+    right: 15%;
+    top: 1.5em;
+    padding: 0;
+  }
+
+  .randomIcon {
+    position: absolute;
+    right: 7%;
+    top: 1.5em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .addIcon {
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    top: 1.5em;
+  }
+
+  .dropButton, .searchWord {
+    display: none;
+  }
+
+  .dropdown:active, .dropdown:hover, .categoryIcon:active, .categoryIcon:hover,
+  .dropdown:hover .dropButton {
+    background-color: transparent;
+  }
+
+  .addIcon:hover, .randomIcon:hover, .catButton:hover {
+    background-color: gray;
+    padding: 0;
+  }
+
+  .backButton:hover {
+    background: gray;
+  }
+
+  .searchField{
+    font-size: 1em;
+    border-radius: 30px;
+    margin: 0;
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .dropdown-content {
+    display: block;
+    background-color: gray;
+    min-width: 30rem;
+    top: 0.4em;
+    right: 35%;
+    border-radius: 30px;
+  }
+  
+  .searchResultsBox {
+    width: 90%;
+    padding: 0 10%;
+    overflow-y: auto;
+    max-height: 30rem;
+    background-color: gray;
+  }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1200px) {
+  .dropdown-content {
+    min-width: 40rem;
+    top: 0.4em;
+    right: 35%;
+    height: 5rem;
+    border-radius: 30px;
+  }
+
+  .searchResultsBox {
+    padding: 0 20%;
+  }
+}

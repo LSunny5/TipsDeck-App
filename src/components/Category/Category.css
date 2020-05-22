@@ -28,3 +28,49 @@
 .categoryName:active {
     background-color: lightblue;
 }
+
+/* for tablets */
+@media only screen and (min-width: 600px) { 
+    .Categories > h1 {
+        font-size: 2em;
+    }
+
+    .Categories > h2 {
+        font-size: 1em;
+    }
+    
+    .categoryBox {
+       flex-direction: row;
+       width: 95%;
+       flex-wrap: wrap;
+       margin: 3% auto;
+       justify-content: space-around;
+       font-size: 0.6em;
+   }
+   
+   .categoryButton {
+       margin: 3%;
+       padding: 20%;
+   }
+   
+   .categoryName {
+       width: 30vw;
+   }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+    .categoryBox {
+        width: 90%;
+        margin: 3% auto;
+    }
+    
+    .categoryButton {
+        margin: 1rem;
+        padding: 3rem;
+    }
+    
+    .categoryName {
+        width: 25%;
+    }
+}

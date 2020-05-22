@@ -9,9 +9,24 @@
 
 .cardName {
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
     border: 2px solid black;
     margin: 5px;
-    width: 15rem;
+    width: 95%;
     background: lightblue;
+    border-radius: 30px;
+}
+
+/* for tablets */
+@media only screen and (min-width: 600px) {
+    .cardName {
+        padding: 1.8rem;
+    }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+    .tipLink {
+        width: 100%;
+    }
 }

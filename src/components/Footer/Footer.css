@@ -14,7 +14,8 @@ footer {
     margin-right: 15px;
     position: absolute;
     right: 0;
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
+    bottom: 10px;
   }
   
   .footerImage {
@@ -26,3 +27,19 @@ footer {
   .footerLogo {
     width: 25%;
   }
+
+/* for tablets */
+@media only screen and (min-width: 600px) {
+  .footerImage {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+  .footerImage {
+    width: 40px;
+    height: 40px;
+  } 
+}

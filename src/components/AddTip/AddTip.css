@@ -37,11 +37,10 @@ legend {
     height: 5rem;
 }
 
-
-  
-  
- 
-  
-  
-  
-  
+ /*for ipads and larger screen sizes*/
+ @media only screen and (min-width: 600px) {
+    .addForm {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

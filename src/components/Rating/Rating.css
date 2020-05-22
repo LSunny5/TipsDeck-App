@@ -2,3 +2,18 @@
     color: blue;
     padding: 0 1px;
   }
+
+  /* for tablets */
+@media only screen and (min-width: 600px) {
+  .rating {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .rating {
+    padding: 1rem;
+    
+  }
+}

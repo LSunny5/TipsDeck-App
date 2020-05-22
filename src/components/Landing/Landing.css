@@ -60,3 +60,26 @@ h1 {
         font-size:1.6em;
     }
 }
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+    .LandingContent > h1{
+        font-size: 8em;
+        margin: 10%;
+        margin-top: 0;
+    }
+
+    .landingLogo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .description {
+        font-size: 3.5em;
+    }
+
+    .letsGoButton {
+        padding: 3%;
+        font-size:3em;
+    }
+}

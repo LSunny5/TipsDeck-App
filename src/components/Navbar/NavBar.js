@@ -44,7 +44,7 @@ class NavBar extends React.Component {
                     <div className="buttonName">Back</div>
                 </button>
                 <NavLink
-                    className="categoryIcon"
+                    className="categoryIcon catButton"
                     to={`/Category`}>
                     <img src="/images/CategoriesIcon.png" alt="Categories Icon" className="logoImage" />
                     <div className="buttonName">Categories</div>
@@ -81,7 +81,7 @@ class NavBar extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="buttonName">Search</div>
+                    <div className="buttonName searchWord">Search</div>
                 </div>
                 <NavLink
                     className="categoryIcon randomIcon"

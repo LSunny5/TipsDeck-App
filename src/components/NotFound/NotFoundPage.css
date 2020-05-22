@@ -13,3 +13,31 @@
 .notFoundError {
     font-size: 2em;
 }
+
+/* for tablets */
+@media only screen and (min-width: 600px) {
+    .description {
+        font-size: 1.5em;
+    }
+
+    .notFoundError {
+        margin: 15% auto;
+    }
+}
+
+/* for large screens */
+@media only screen and (min-width: 1024px) {
+    .notFound {
+        width: 80%;
+        margin: 10% auto;
+        height: 100%;
+    }
+    
+    .notFoundTitle {
+        color: red;
+    }
+    
+    .notFoundError {
+        margin: 8% auto;
+    } 
+}

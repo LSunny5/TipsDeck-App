@@ -45,3 +45,47 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media only screen and (min-width: 600px) { 
+    .CategoryTipsBox > h1 {
+        margin-top: 0;
+    }
+
+    .CategoryTipsBox {
+        margin-top: 1%;
+    }
+    
+    .TipsBox {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .tName {
+        font-size: 1.4em;
+    }
+
+    .TipLink {
+        width: 30%;
+        margin: 1%;
+        overflow: hidden;
+        min-height: 21vh;
+    }
+
+    .tipDesc {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 1024px) { 
+    .CategoryTipsBox {
+        margin: 0 auto;
+    }
+
+    .TipLink {
+        width: 15vw;
+        margin: 1%;
+        overflow: hidden;
+        height: 28vh;
+    }
+}

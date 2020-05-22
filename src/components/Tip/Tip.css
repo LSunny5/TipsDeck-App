@@ -4,19 +4,6 @@
 
 }
 
-.ratingAverage {
-    margin: 10px;
-}
-
-.rateMessage {
-    margin-top:10px;
-    font-weight: bolder;
-}
-
-.starBox {
-    margin: 0 10px 10px;
-}
-
 .tipTitle {
     font-size: 2em;
 }
@@ -47,11 +34,6 @@
     margin: 20px;
 }
 
-.wordBreak {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
 .buttonBox {
     width: 80%;
     margin: 0 auto;
@@ -76,4 +58,36 @@
     border: 1px solid black;
     padding: 10px;
     width: 80px;
+}
+
+@media only screen and (min-width: 600px) {
+    .tipTitle {
+        font-size: 2.5em;
+    }
+    
+    .catName {
+        font-size: 2em;
+    }
+
+    .tipText{
+        font-size: 1.8em;
+    }
+
+    .lefttext {
+        margin: 0 auto;
+    }
+
+    .deleteTipButton, .editTipButton {
+        margin-top: 2rem;
+        padding: 3%;
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .deleteTipButton, .editTipButton {
+        margin: 2rem auto;
+        width: 10rem;
+        font-size: 1em;
+    }
 }
