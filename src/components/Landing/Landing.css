@@ -1,38 +1,128 @@
 /*container for entire Landing page content*/
 .LandingContent {
-    min-height: 90vh;
+    height: 100vh;
+    margin: 0 auto;
+    width: 75%;
+    position: relative;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    width: 75%;
+}
+
+.landingbg {
+    background: url(/images/white-table-blue-book.jpg) no-repeat center center fixed;
+    min-height: 100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
 }
 
 .landingLogo {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem; 
+    opacity: 70%;
 }
 
-h1 {
+.LandingHeading {
     font-size: 2.5em;
-    margin: 10px auto;
+    margin: 15% auto 10%;
+    font-family: 'Della Respira', serif;
+    width: 75%;
 }
 
 /*description on Landing Page*/
 .description {
-    margin: 10% auto;
+    margin: 1em auto 5em;
+    font-family: 'ABeeZee', sans-serif;
+    width: 80%;
+    text-indent: 3em;
+    text-align: left;
 }
 
-/*Let's Go button*/
-.letsGoButton {
-    border-radius: 30px;
-    padding: 3%;
-    background: white;
-    width: 35%;
-    margin: 5%;
-    background: lightgrey;
+/*adapted from https://codepen.io/kathykato/pen/rZRaNe?editors=1100*/
+  .letsGoButton {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    border: 0;
     text-decoration: none;
+    background: transparent;
+    padding: 0;
+    width: 12rem;
+    height: auto;
+}
+
+.circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #07B0F2;
+    border-radius: 1.625rem;
+}
+
+.icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: white;
+}
+
+.letsGoButton .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.letsGoButton .circle .icon.arrow::before {
+    position: absolute;
+    content: '';
+    top: -0.31rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid white;
+    border-right: 0.125rem solid white;
+    transform: rotate(45deg);
+}
+
+.button-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    font-size: 1em;
+}
+
+.letsGoButton:hover .circle {
+    width: 100%;
+}
+.letsGoButton:hover .circle .icon{
+    background: white;
+    transform: translate(1rem, 0);
+}
+
+.letsGoButton:hover .button-text {
+    color: white;
 }
 
 .landingFooter{
@@ -41,45 +131,57 @@ h1 {
     right: 5px;
     bottom: 5px;
     font-size: 10px;
+    color: white;
 }
 
 /* for tablets */
 @media only screen and (min-width: 600px) {
-    .LandingContent > h1{
+    .LandingHeading{
         font-size: 5em;
-        margin: 10%;
-        margin-top: 0;
+        margin: 10% auto;
     }
 
-    .description {
-        font-size: 1.5em;
+    .landingLogo {
+        height: 50px;
+        width: 50px;
     }
 
     .letsGoButton {
-        padding: 5%;
-        font-size:1.6em;
+        width: 15rem;
+    }
+    
+    .circle {
+        height: 4rem;
+    }
+
+    .letsGoButton .circle .icon.arrow::before {
+        width: 0.8rem;
+        height: 0.8rem;
+        top: -0.4rem;
+    }
+
+    .button-text {
+        font-size: 1.7em;
     }
 }
 
 /* for large screens */
 @media only screen and (min-width: 1024px) {
-    .LandingContent > h1{
-        font-size: 8em;
-        margin: 10%;
-        margin-top: 0;
+    .landingLogo {
+        width: 70px;
+        height: 70px;
     }
 
-    .landingLogo {
-        width: 200px;
-        height: 200px;
+    .landingbg {
+        background-position: center bottom 25%;
+       
+    }
+
+    .LandingHeading {
+        margin: 7% auto 3%;
     }
 
     .description {
-        font-size: 3.5em;
-    }
-
-    .letsGoButton {
-        padding: 3%;
-        font-size:3em;
+        margin: 3% auto 10%;
     }
 }

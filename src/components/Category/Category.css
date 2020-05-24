@@ -1,3 +1,7 @@
+.Categories {
+    padding-bottom: 3rem;
+}
+
 /*container for category buttons*/
 .categoryBox {
     display: flex;

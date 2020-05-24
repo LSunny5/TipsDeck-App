@@ -162,14 +162,14 @@ class EditTip extends React.Component {
                     </div>
                     <label htmlFor="Category" className="inputLabel">Category: </label>
                     <select id="Category" className="inputEdit"
-                        defaultValue={catForTip.id}
+                        value={tipEdit.category_id}              
                         required
                         onChange={e => this.inputUpdate("Category", e.target.value)}
                     >
-                        {categories.slice(0, categories.length - 1).map(category =>
+                        {categories.slice(0, categories.length).map(category =>
                             <option
                                 key={category.id}
-                                value={category.category}
+                                value={category.id}
                             >
                                 {category.category}
                             </option>

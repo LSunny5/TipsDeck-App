@@ -6,16 +6,25 @@ import { NavLink } from 'react-router-dom'
 class LandingPage extends React.Component {
     render() {
         return (
-            <section className="LandingContent">
-                <h1>TipsDeck</h1>
-                <img src='images/TipsDeckLogo.png' className="landingLogo" alt="TipsDeck Logo"/>
+            <section className="LandingContent landingbg">
+                <img src='images/TipsDeckLogo.png' className="landingLogo" alt="TipsDeck Logo" />
+                <h1 className="LandingHeading">
+                    TipsDeck
+                </h1>
                 <div>
-                    <p className="description">TipsDeck is a collection of tips and life hacks from all over that can help optimize everday life.  In Japan, the word to describe this is Urawaza, which means secret trick.  From topics in beauty, cleaning, gardening, and even dealing with kids, TipsDeck can be your go-to for quick solutions to your everyday problems.</p>
-                    <NavLink to="/Category" className="letsGoButton">Let's Go!</NavLink>
+                    <p className="description">TipsDeck is a collection of tips and life hacks that aim to help optimize everday life.  From topics in beauty, cleaning, childcare, and more TipsDeck can be your go-to for alternative quick solutions for everyday needs with the tools you have on hand.</p>
+                    <div id="letsGoContainer">
+                        <NavLink to="/Category" className="letsGoButton">
+                            <span className="circle" aria-hidden="true">
+                                <span className="icon arrow"></span>
+                            </span>
+                            <span className="button-text">Let's Go </span>
+                        </NavLink>
+                    </div>
                 </div>
-                <div className="landingFooter">
+                <p className="landingFooter">
                     Created by Sunny Lee
-                </div>
+                </p>
             </section>
         );
     }

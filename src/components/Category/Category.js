@@ -31,6 +31,13 @@ class Category extends React.Component {
                             <div className="noCategories">
                                 No categories found
                             </div>)}
+                    <Link
+                        to={`/Random`}
+                        className="categoryName">
+                        <div className="categoryButton">
+                            Random
+                                </div>
+                    </Link>
                 </div>
             </section>
         );

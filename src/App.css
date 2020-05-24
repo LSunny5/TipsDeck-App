@@ -4,15 +4,17 @@
     text-align: center;
 }
 
+body {
+    background-color: #07B0F2;
+    min-height: -webkit-fill-available;
+}
+
 /*container for all app content*/
 main {
     min-height: 100vh;
     text-align: center;
     position: relative;
-}
-
-.content {
-    padding-bottom: 3rem;
+    font-family: 'ABeeZee', sans-serif;
 }
 
 /*Container for footer*/

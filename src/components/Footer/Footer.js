@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 
 class Footer extends React.Component {
     render() {
+        if (window.location.pathname === '/') return null;
+
         return (
             <footer className="footer">
                 <div className="footerLogo">

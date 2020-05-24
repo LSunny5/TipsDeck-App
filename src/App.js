@@ -49,7 +49,7 @@ class App extends React.Component {
   deleteTip = tipId => {
     const tipsArray = this.state.tips.filter(tip => tip.id !== tipId);
     //this.setState({ tips: tipsArray })
-    this.setState({ tips: tipsArray})
+    this.setState({ tips: tipsArray })
   };
 
   //add a tip
@@ -90,7 +90,8 @@ class App extends React.Component {
           <Route path='/addTip' exact component={AddTip} />
 
           {/* Route Random Page */}
-          <Route path='/random' exact component={Random} />
+          <Route path='/Random' exact component={Random} />
+
 
           {/* Routes for Category Tips list */}
           {['/Category/:name'].map(path => (
@@ -115,7 +116,7 @@ class App extends React.Component {
           {/* Routes for Editing Each tip */}
           <Route path='/Category/:name/:id/editTip' exact component={EditTip} />
 
-          <Route component={NotFoundPage} />
+          <Route path='*' component={NotFoundPage} />
         </Switch>
       </div>
     );
@@ -127,6 +128,7 @@ class App extends React.Component {
       <div>
         <Switch>
           <Route path='/' exact />
+
           <Route component={Footer} />
         </Switch>
       </div>
@@ -148,9 +150,12 @@ class App extends React.Component {
           <div className="headerBox">
             {this.renderNavRoutes()}
           </div>
+          
           <div className="content">
             {this.renderMainRoutes()}
           </div>
+
+
           <div className="footerBox">
             {this.renderFooterRoutes()}
           </div>
