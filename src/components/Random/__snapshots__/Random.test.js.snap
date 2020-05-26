@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Random component renders the Random component 1`] = `
+<section
+  className="RandomContent"
+>
+  <h1>
+    Random
+  </h1>
+  <div
+    className="TipsBox"
+  >
+    <div
+      className="noTips"
+    >
+      Sorry there are no tips at this time.
+    </div>
+  </div>
+</section>
+`;

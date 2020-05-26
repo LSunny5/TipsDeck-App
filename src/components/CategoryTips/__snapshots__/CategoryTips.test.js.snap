@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryTips component renders the CategoryTips component 1`] = `
+<section
+  className="CategoryTipsBox"
+>
+  <h1 />
+  <div
+    className="TipsBox"
+  >
+    <div
+      className="noTips"
+    >
+      Sorry there are no tips at this time.
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditTip component renders the EditTip form 1`] = `
+<section
+  className="editContent"
+>
+  <form
+    className="formBox"
+    onSubmit={[Function]}
+  >
+    <fieldset>
+      <legend>
+        Edit Tip
+      </legend>
+      <h2>
+        "
+        "
+      </h2>
+      <label
+        className="inputLabel"
+        htmlFor="TipName"
+      >
+        Name of Tip 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        :  
+      </label>
+      <input
+        className="inputEdit"
+        id="TipName"
+        name="TipName"
+        onChange={[Function]}
+        required={true}
+        type="text"
+      />
+      <div
+        className="errorBox"
+        id="contentErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="Category"
+      >
+        Category: 
+      </label>
+      <select
+        className="inputEdit"
+        id="Category"
+        onChange={[Function]}
+        required={true}
+      />
+      <br />
+      <label
+        className="inputLabel"
+        htmlFor="description"
+      >
+        Description 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        : 
+      </label>
+      <br />
+      <textarea
+        id="description"
+        name="description"
+        onChange={[Function]}
+      />
+      <div
+        className="errorBox"
+        id="contentErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="directions"
+      >
+        Directions: 
+      </label>
+      <textarea
+        id="directions"
+        name="directions"
+        onChange={[Function]}
+      />
+      <br />
+      <label
+        className="inputLabel"
+        htmlFor="sourceName"
+      >
+        Source Name 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        : 
+      </label>
+      <input
+        className="inputEdit"
+        id="sourceName"
+        name="sourceName"
+        onChange={[Function]}
+        required={true}
+        type="text"
+      />
+      <div
+        className="errorBox"
+        id="contentErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="sourceurl"
+      >
+        Source URL: 
+      </label>
+      <textarea
+        className="sourceText"
+        id="sourceurl"
+        name="sourceurl"
+        onChange={[Function]}
+        type="text"
+      />
+      <div
+        className="rateBox"
+      >
+        <div>
+          <label
+            className="inputLabel"
+            htmlFor="rating"
+          >
+            Rating (0-5) 
+            <span
+              className="required"
+            >
+              *
+            </span>
+            :  
+          </label>
+          <input
+            className="rateCSS"
+            id="rating"
+            name="rating"
+            onChange={[Function]}
+            required={true}
+            type="text"
+          />
+        </div>
+        <div>
+          <label
+            className="inputLabel"
+            htmlFor="raters"
+          >
+            # of Raters: 
+          </label>
+          <input
+            className="rateCSS"
+            id="raters"
+            name="raters"
+            onChange={[Function]}
+            required={true}
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="errorBox"
+        id="contentErrorBox"
+      />
+      <div
+        className="formButtonBox"
+      >
+        <button
+          className="formSubmit formButton"
+          type="submit"
+        >
+          Save Changes
+        </button>
+        <NavLink
+          className="formCancel formButton"
+          to="/Category/undefined/undefined"
+        >
+          Cancel
+        </NavLink>
+      </div>
+    </fieldset>
+  </form>
+</section>
+`;

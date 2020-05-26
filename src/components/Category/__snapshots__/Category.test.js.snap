@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category component renders the Category component 1`] = `
+<section
+  className="Categories"
+>
+  <h1>
+    Categories
+  </h1>
+  <h2>
+    Choose a category 
+  </h2>
+  <div
+    className="categoryBox"
+  >
+    <div
+      className="noCategories"
+    >
+      No categories found
+    </div>
+    <Link
+      className="categoryName"
+      to="/Random"
+    >
+      <div
+        className="categoryButton"
+      >
+        Random
+      </div>
+    </Link>
+  </div>
+</section>
+`;

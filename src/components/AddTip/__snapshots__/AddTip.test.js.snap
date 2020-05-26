@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTip component renders the AddTip form 1`] = `
+<section
+  className="AddTipContent"
+>
+  <form
+    className="formBox"
+    onSubmit={[Function]}
+  >
+    <fieldset>
+      <legend>
+        Add a Tip
+      </legend>
+      <label
+        className="inputLabel"
+        htmlFor="TipName"
+      >
+        Name of Tip 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        : 
+      </label>
+      <input
+        className="inputEdit wide"
+        id="TipName"
+        name="TipName"
+        onChange={[Function]}
+        placeholder="Add tip name here..."
+        type="text"
+      />
+      <div
+        className="errorBox"
+        id="nameErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="Category"
+      >
+        Category: 
+      </label>
+      <select
+        defaultValue=""
+        id="Category"
+        onChange={[Function]}
+        required={true}
+      />
+      <br />
+      <label
+        className="inputLabel"
+        htmlFor="description"
+      >
+        Description 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        : 
+      </label>
+      <textarea
+        id="description"
+        name="description"
+        onChange={[Function]}
+        placeholder="Add a description here..."
+      />
+      <div
+        className="errorBox"
+        id="nameErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="directions"
+      >
+        Directions: 
+      </label>
+      <textarea
+        id="directions"
+        name="directions"
+        onChange={[Function]}
+        placeholder="Add directions here..."
+      />
+      <label
+        className="inputLabel"
+        htmlFor="sourceName"
+      >
+        Source Name 
+        <span
+          className="required"
+        >
+          *
+        </span>
+        :  
+      </label>
+      <input
+        className="inputEdit wide"
+        id="sourceName"
+        name="sourceName"
+        onChange={[Function]}
+        placeholder="Add name of source here..."
+        type="text"
+      />
+      <div
+        className="errorBox"
+        id="nameErrorBox"
+      />
+      <label
+        className="inputLabel"
+        htmlFor="sourceURL"
+      >
+        Source URL: 
+      </label>
+      <textarea
+        className="sourceText"
+        id="sourceURL"
+        name="sourceURL"
+        onChange={[Function]}
+        placeholder="Enter source URL here..."
+        type="text"
+      />
+      <div
+        className="formButtonBox"
+      >
+        <button
+          className="formSubmit formButton"
+          disabled="Name is required and more than 3 characters"
+          type="submit"
+        >
+          Add Tip
+        </button>
+        <NavLink
+          className="formCancel formButton"
+          to="/Category"
+        >
+          Cancel
+        </NavLink>
+      </div>
+    </fieldset>
+  </form>
+</section>
+`;

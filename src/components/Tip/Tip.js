@@ -10,7 +10,6 @@ import config from '../../config';
 class Tip extends React.Component {
     static contextType = TipsDeckContext;
 
-
     handleClickDelete = (cName) => {
         const { id } = this.props.match.params;
 

@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders the NavBar component 1`] = `
+<nav
+  className="navBar"
+  role="navigation"
+>
+  <button
+    className="categoryIcon backButton"
+    onClick={[Function]}
+  >
+    <img
+      alt="Go back"
+      className="logoImage back"
+      src="/images/backarrow.png"
+    />
+    <div
+      className="buttonName"
+    >
+      Back
+    </div>
+  </button>
+  <NavLink
+    className="categoryIcon catButton"
+    to="/Category"
+  >
+    <img
+      alt="Categories Icon"
+      className="logoImage"
+      src="/images/CategoriesIcon.png"
+    />
+    <div
+      className="buttonName"
+    >
+      Categories
+    </div>
+  </NavLink>
+  <div
+    className="categoryIcon"
+  >
+    <div
+      className="dropdown"
+    >
+      <button
+        className="dropButton"
+      >
+        <img
+          alt="Search Logo"
+          className="logoImage"
+          src="/images/MagnifyingIcon.png"
+        />
+      </button>
+      <div
+        className="dropdown-content"
+      >
+        <div
+          className="searchBar"
+        >
+          <input
+            autoComplete="off"
+            className="searchField"
+            name="search"
+            onChange={[Function]}
+            placeholder=" Search for tips here..."
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="searchResultsBox"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      className="buttonName searchWord"
+    >
+      Search
+    </div>
+  </div>
+  <NavLink
+    className="categoryIcon randomIcon"
+    to="/Random"
+  >
+    <img
+      alt="Random Logo"
+      className="logoImage"
+      src="/images/dice.png"
+    />
+    <div
+      className="buttonName"
+    >
+      Random
+    </div>
+  </NavLink>
+  <NavLink
+    className="categoryIcon addIcon"
+    to="/addTip"
+  >
+    <img
+      alt="Plus Logo"
+      className="logoImage"
+      src="/images/PlusSymbol.png"
+    />
+    <div
+      className="buttonName"
+    >
+      Add Tip
+    </div>
+  </NavLink>
+</nav>
+`;

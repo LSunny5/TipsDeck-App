@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating component renders the Rating by default 1`] = `
+<div
+  className="rating"
+>
+  <span
+    key="0"
+  >
+    ☆
+  </span>
+  <span
+    key="1"
+  >
+    ☆
+  </span>
+  <span
+    key="2"
+  >
+    ☆
+  </span>
+  <span
+    key="3"
+  >
+    ☆
+  </span>
+  <span
+    key="4"
+  >
+    ☆
+  </span>
+  <p>
+     stars
+  </p>
+</div>
+`;
