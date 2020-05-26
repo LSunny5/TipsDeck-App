@@ -1,6 +1,6 @@
 .navBar {
   width: 100%;
-  background: lightgrey;
+  background: white;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

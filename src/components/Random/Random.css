@@ -1,4 +1,30 @@
 .RandomContent {
-    margin: 2rem auto 3rem;
+    margin: 0;
     padding-bottom: 5rem;
 }
+
+.RandomContent > h1 {
+    font-size: 2em;
+    padding: 3%;
+    font-family: 'Della Respira', serif;
+}
+
+  /*for ipads and larger screen sizes*/
+  @media only screen and (min-width: 600px) {
+    .RandomContent{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .RandomContent > h1 {
+          padding: 1%;
+      }
+    }
+
+      /*for desktops*/
+  @media only screen and (min-width: 1024px) {
+    .RandomContent {
+        width: 90%;
+        margin: 0 auto;
+    }
+  }

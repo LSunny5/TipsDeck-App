@@ -2,6 +2,16 @@
     padding-bottom: 3rem;
 }
 
+.Categories > h1 {
+    padding: 3%;
+    font-size: 1.5em;
+    font-family: 'Della Respira', serif;
+}
+
+.Categories > h2 {
+    font-size: 1em;
+}
+
 /*container for category buttons*/
 .categoryBox {
     display: flex;
@@ -12,21 +22,38 @@
 
 /*css for each category button design*/
 .categoryButton {
-    font-size: 2em;
-    border: 1px solid black;
+    margin: 2% auto;
+    padding: 1em;
     color: black;
-    margin: 3% 4%;
-    padding: 6%;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #168BF2;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-image: -webkit-linear-gradient(30deg, white 50%, transparent 50%);
+    background-image: linear-gradient(30deg, white 50%, transparent 50%);
+    background-size: 1000px;
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+}
+
+.categoryButton:hover {
+    background-position: 100%;
+    color: white;
 }
 
 /*css for Link or name of category buttons*/
 .categoryName {
     text-decoration: none;
     width: 70vw;
+    padding: 1.5% 3%;
 }
 
 .categoryName:hover {
-    background-color: teal;
+    background-color: #D9AB73;
+    border-radius: 30px;
 }
 
 .categoryName:active {
@@ -36,45 +63,62 @@
 /* for tablets */
 @media only screen and (min-width: 600px) { 
     .Categories > h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
-
+    
     .Categories > h2 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     
     .categoryBox {
-       flex-direction: row;
-       width: 95%;
-       flex-wrap: wrap;
-       margin: 3% auto;
-       justify-content: space-around;
-       font-size: 0.6em;
-   }
-   
-   .categoryButton {
-       margin: 3%;
-       padding: 20%;
-   }
-   
-   .categoryName {
-       width: 30vw;
-   }
+        flex-direction: row;
+        width: 90%;
+        flex-wrap: wrap;
+        margin: 3% auto;
+        justify-content: space-around;
+        font-size: 0.8em;
+    }
+    
+    .categoryButton {
+        margin: 5% auto;
+        padding: 2.5em;
+    }
+    
+    .categoryName {
+        width: 30vw;
+        padding: 1% 2%;
+    }
 }
 
 /* for large screens */
 @media only screen and (min-width: 1024px) {
-    .categoryBox {
-        width: 90%;
-        margin: 3% auto;
+    .Categories > h1 {
+        padding: 1%;
     }
     
+    .Categories > h2 {
+        font-size: 1.2em;
+    }
+
+    .categoryBox {
+        margin-top: 1rem;
+    }
+    
+    
+    .Categories{
+        min-height: 87vh;
+    }
+
     .categoryButton {
-        margin: 1rem;
+        margin: 0.7rem;
         padding: 3rem;
     }
     
     .categoryName {
         width: 25%;
+    }
+
+    .categoryName:hover{
+        padding: 0.2rem;
     }
 }

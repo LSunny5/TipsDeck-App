@@ -55,11 +55,11 @@ class Tip extends React.Component {
 
                 <div className="tipText">
                     <p className="bold lefttext">Description: </p>
-                    {targetTip.tipdescription}
+                    <p className="indent">{targetTip.tipdescription}</p>
                 </div>
                 <div className="tipText">
                     <p className="bold lefttext">Directions: </p>
-                    {targetTip.directions}
+                    <p className="indent">{targetTip.directions}</p>
                 </div>
                 <div className="tipText sourceBox">
                     <p className="bold lefttext">Source: </p>
@@ -70,14 +70,14 @@ class Tip extends React.Component {
 
                 <div className="buttonBox">
                     <NavLink
-                        className="editTipButton"
+                        className="editTipButton button"
                         to={`/Category/${cat.category}/${id}/editTip`}
                     >
                         Edit
                     </NavLink>
 
                     <button
-                        className="deleteTipButton"
+                        className="deleteTipButton button"
                         type='button'
                         onClick={() => {
                             if (window.confirm('Are you sure you wish to delete the tip?') ?

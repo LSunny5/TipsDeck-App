@@ -28,7 +28,7 @@ class AddTip extends React.Component {
             directions: {
                 value: '',
                 touched: false
-            }, 
+            },
             sourceName: {
                 value: '',
                 touched: false
@@ -36,12 +36,12 @@ class AddTip extends React.Component {
             sourceurl: {
                 value: '',
                 touched: false
-            }, 
+            },
         }
     }
 
     inputUpdate(field, text) {
-        this.setState({ [field]: {value: text, touched: true} })
+        this.setState({ [field]: { value: text, touched: true } })
     }
 
     validateName() {
@@ -111,20 +111,21 @@ class AddTip extends React.Component {
 
         return (
             <section className="AddTipContent">
-                <section className="addBox">
-                    <form className="addForm" onSubmit={this.handleSubmit}>
+                <form className="formBox" onSubmit={this.handleSubmit}>
+                    <fieldset>
                         <legend>Add a Tip</legend>
-                        <label htmlFor="TipName" className="inputLabel">Name of Tip: </label>
+                        <label htmlFor="TipName" className="inputLabel">Name of Tip <span className="required">*</span>: </label>
+
                         <input
                             type="text"
                             id="TipName"
                             name="TipName"
-                            className="inputAdd"
+                            className="inputEdit wide"
                             placeholder="Add tip name here..."
                             onChange={e => this.inputUpdate("TipName", e.target.value)}
                         />
                         <div className="errorBox" id="nameErrorBox">
-                                {this.state.TipName.touched && <ValidationError message={nameError} />}
+                            {this.state.TipName.touched && <ValidationError message={nameError} />}
                         </div>
                         <label htmlFor="Category" className="inputLabel">Category: </label>
                         <select
@@ -142,10 +143,8 @@ class AddTip extends React.Component {
                                 </option>
                             )}
                         </select>
-                        <br />
-                        <br />
-                        <label htmlFor="description" className="inputLabel">Description: </label>
-                        <br />
+                        <br/>
+                        <label htmlFor="description" className="inputLabel">Description <span className="required">*</span>: </label>
                         <textarea
                             id="description"
                             name="description"
@@ -153,31 +152,28 @@ class AddTip extends React.Component {
                             onChange={e => this.inputUpdate("description", e.target.value)}
                         />
                         <div className="errorBox" id="nameErrorBox">
-                                {this.state.description.touched && <ValidationError message={descError} />}
+                            {this.state.description.touched && <ValidationError message={descError} />}
                         </div>
                         <label htmlFor="directions" className="inputLabel">Directions: </label>
-                        <br />
                         <textarea
                             id="directions"
                             name="directions"
                             placeholder="Add directions here..."
                             onChange={e => this.inputUpdate("directions", e.target.value)}
                         />
-                        <br />
-                        <label htmlFor="sourceName" className="inputLabel">Source Title:  </label>
+                        <label htmlFor="sourceName" className="inputLabel">Source Name <span className="required">*</span>:  </label>
                         <input
                             type="text"
                             id="sourceName"
                             name="sourceName"
-                            className="inputAdd"
+                            className="inputEdit wide"
                             placeholder="Add name of source here..."
                             onChange={e => this.inputUpdate("sourceName", e.target.value)}
                         />
                         <div className="errorBox" id="nameErrorBox">
-                                {this.state.sourceName.touched && <ValidationError message={sourceError} />}
+                            {this.state.sourceName.touched && <ValidationError message={sourceError} />}
                         </div>
                         <label htmlFor="sourceURL" className="inputLabel">Source URL: </label>
-                        <br />
                         <textarea
                             type="text"
                             id="sourceURL"
@@ -186,11 +182,10 @@ class AddTip extends React.Component {
                             placeholder="Enter source URL here..."
                             onChange={e => this.inputUpdate("sourceURL", e.target.value)}
                         />
-                        <br />
-                        <div className="buttonBox">
+                        <div className="formButtonBox">
                             <button
                                 type="submit"
-                                className="editButton"
+                                className="formSubmit formButton"
                                 disabled={
                                     this.validateName() ||
                                     this.validateDescription() ||
@@ -200,14 +195,15 @@ class AddTip extends React.Component {
                                 Add Tip
                         </button>
                             <NavLink
-                                className="editButton"
+                                className="formCancel formButton"
                                 to={`/Category`}
                             >
                                 Cancel
                         </NavLink>
                         </div>
-                    </form>
-                </section>
+
+                    </fieldset>
+                </form>
             </section>
         );
     }
@@ -215,11 +211,11 @@ class AddTip extends React.Component {
 
 AddTip.propTypes = {
     categories: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        category: PropTypes.string.isRequired,
-      })
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            category: PropTypes.string.isRequired,
+        })
     ),
-  };
+};
 
 export default AddTip;

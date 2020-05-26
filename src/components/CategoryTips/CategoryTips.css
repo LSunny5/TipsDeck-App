@@ -1,7 +1,10 @@
 .CategoryTipsBox {
-    margin: 3%;
     padding: 2%;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
+}
+
+.CategoryTipsBox > h1 {
+    padding: 3%;
 }
 
 .TipsBox {
@@ -13,80 +16,82 @@
 }
 
 .tName {
-    font-size: 1.6em;
-    padding: 5%;
-    margin-bottom: 3%;
+    font-size: 1.2em;
+    padding: 0.5rem;
 }
 
 .TipLink {
-    border: 2px solid black;
     padding: 1rem;
     margin: 2%;
     text-decoration: none;
     color: black;
-    width: 80%;
+    width: 60%;
     height: 200px;
+    border-radius: 30px;
+    background: white; 
+    border: 3px solid #FF8E29;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 .TipLink:hover {
-    background: lightblue;
+    background: #FFBA66;
+    box-shadow: 0 0 10px 0 #FF8E29 inset, 0 0 20px 2px #FF8E29;
+    border: 3px solid #FF8E29;
 }
 
 .TipLink:active {
-    background: paleturquoise;
+    background: #D9A86C;
 }
 
 /* tip description css */
 .tipDesc {
-    max-height: 5rem;
+    max-height: 6rem;
     /* line clamping so ellipsis is used after 3 lines */
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical; 
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 0.8em;
+    word-wrap: break-word;
 }
 
-@media only screen and (min-width: 600px) { 
-    .CategoryTipsBox > h1 {
-        margin-top: 0;
-    }
-
-    .CategoryTipsBox {
-        margin-top: 1%;
-    }
-    
+@media only screen and (min-width: 600px) {   
     .TipsBox {
         flex-direction: row;
         flex-wrap: wrap;
-
     }
 
-    .tName {
-        font-size: 1.4em;
+    .tName{
+        font-size: 1em;
     }
 
     .TipLink {
-        width: 30%;
-        margin: 1%;
+        width: 25%;
+        margin: 1rem;
         overflow: hidden;
-        min-height: 21vh;
-    }
-
-    .tipDesc {
-        font-size: 1.2em;
+        min-height: 20vh;
     }
 }
 
 @media only screen and (min-width: 1024px) { 
-    .CategoryTipsBox {
-        margin: 0 auto;
+    .CategoryTipsBox{
+        min-height: 88vh;
+        padding: 1rem;
+    }
+
+    .CategoryTipsBox > h1 {
+        padding: 1rem;
+    }
+
+    .tipDesc {
+        max-height: 10rem;
+        -webkit-line-clamp: 6;
     }
 
     .TipLink {
-        width: 15vw;
-        margin: 1%;
-        overflow: hidden;
-        height: 28vh;
+        width: 20%;  
+        height: 25vh;
     }
 }

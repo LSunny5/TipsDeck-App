@@ -29,7 +29,7 @@ class EditTip extends React.Component {
             directions: {
                 value: '',
                 touched: false
-            }, 
+            },
             sourceName: {
                 value: '',
                 touched: false
@@ -37,7 +37,7 @@ class EditTip extends React.Component {
             sourceurl: {
                 value: '',
                 touched: false
-            }, 
+            },
             rating: {
                 value: 0,
                 touched: false
@@ -50,7 +50,7 @@ class EditTip extends React.Component {
     }
 
     inputUpdate(field, text) {
-        this.setState({ [field]: {value: text, touched: true} })
+        this.setState({ [field]: { value: text, touched: true } })
     }
 
     validateName() {
@@ -87,10 +87,10 @@ class EditTip extends React.Component {
         event.preventDefault();
         const { id, name } = this.props.match.params;
 
-        const catId = getCategoryId(this.context.categories, event.target['Category'].value);
+        const catId = getCategoryId(this.context.categories, name);
 
         const changedNote = {
-            category_id: catId.id,
+            category_id: parseInt(catId.id),
             tipname: event.target['TipName'].value,
             tipdescription: event.target['description'].value,
             directions: event.target['directions'].value,
@@ -109,9 +109,9 @@ class EditTip extends React.Component {
             body: JSON.stringify(changedNote),
         })
             .then(response => {
-                if (!response.ok){
+                if (!response.ok) {
                     return response.json().then(error => Promise.reject(error))
-                }   
+                }
                 return response
             })
             .then((tip) => {
@@ -144,126 +144,129 @@ class EditTip extends React.Component {
 
         return (
             <section className="editContent">
-                <h1>Edit Tip</h1>
-                <h2>"{tipEdit.tipname}"</h2>
-                <form className="editForm" onSubmit={this.handleClickEdit}>
-                    <label htmlFor="TipName" className="inputLabel">Name of Tip: </label>
-                    <input
-                        type="text"
-                        id="TipName"
-                        name="TipName"
-                        className="inputEdit"
-                        required
-                        defaultValue={tipEdit.tipname}
-                        onChange={e => this.inputUpdate("TipName", e.target.value)}
-                    />
-                    <div className="errorBox" id="contentErrorBox">
-                        {this.state.TipName.touched && <ValidationError message={nameError} />}
-                    </div>
-                    <label htmlFor="Category" className="inputLabel">Category: </label>
-                    <select id="Category" className="inputEdit"
-                        value={tipEdit.category_id}              
-                        required
-                        onChange={e => this.inputUpdate("Category", e.target.value)}
-                    >
-                        {categories.slice(0, categories.length).map(category =>
-                            <option
-                                key={category.id}
-                                value={category.id}
+                <form className="formBox" onSubmit={this.handleClickEdit}>
+                    <fieldset>
+                        <legend>Edit Tip</legend>
+                        <h2>"{tipEdit.tipname}"</h2>
+                        <label htmlFor="TipName" className="inputLabel">Name of Tip <span className="required">*</span>:  </label>
+                        <input
+                            type="text"
+                            id="TipName"
+                            name="TipName"
+                            className="inputEdit"
+                            required
+                            defaultValue={tipEdit.tipname}
+                            onChange={e => this.inputUpdate("TipName", e.target.value)}
+                        />
+                        <div className="errorBox" id="contentErrorBox">
+                            {this.state.TipName.touched && <ValidationError message={nameError} />}
+                        </div>
+                        <label htmlFor="Category" className="inputLabel">Category: </label>
+                        <select id="Category" className="inputEdit"
+                            value={tipEdit.category_id}
+                            required
+                            onChange={e => this.inputUpdate("Category", e.target.value)}
+                        >
+                            {categories.slice(0, categories.length).map(category =>
+                                <option
+                                    key={category.id}
+                                    value={category.id}
+                                >
+                                    {category.category}
+                                </option>
+                            )}
+                        </select>
+                        <br />
+                        <label htmlFor="description" className="inputLabel">Description <span className="required">*</span>: </label>
+                        <br />
+                        <textarea
+                            id="description"
+                            name="description"
+                            defaultValue={tipEdit.tipdescription}
+                            onChange={e => this.inputUpdate("description", e.target.value)}
+                        />
+                        <div className="errorBox" id="contentErrorBox">
+                            {this.state.description.touched && <ValidationError message={descError} />}
+                        </div>
+                        <label htmlFor="directions" className="inputLabel">Directions: </label>
+                        <textarea
+                            id="directions"
+                            name="directions"
+                            defaultValue={tipEdit.directions}
+                            onChange={e => this.inputUpdate("directions", e.target.value)}
+                        />
+                        <br />
+                        <label htmlFor="sourceName" className="inputLabel">Source Name <span className="required">*</span>: </label>
+                        <input
+                            type="text"
+                            id="sourceName"
+                            name="sourceName"
+                            className="inputEdit"
+                            required
+                            defaultValue={tipEdit.sourcetitle}
+                            onChange={e => this.inputUpdate("sourceName", e.target.value)}
+                        />
+                        <div className="errorBox" id="contentErrorBox">
+                            {this.state.sourceName.touched && <ValidationError message={sourceError} />}
+                        </div>
+                        <label htmlFor="sourceurl" className="inputLabel">Source URL: </label>
+                        <textarea
+                            type="text"
+                            id="sourceurl"
+                            name="sourceurl"
+                            className="sourceText"
+                            defaultValue={tipEdit.sourceurl}
+                            onChange={e => this.inputUpdate("sourceurl", e.target.value)}
+                        />
+                        <div className="rateBox">
+                            <div>
+                                <label htmlFor="rating" className="inputLabel">Rating (0-5) <span className="required">*</span>:  </label>
+                                <input
+                                    type="text"
+                                    id="rating"
+                                    name="rating"
+                                    className="rateCSS"
+                                    required
+                                    defaultValue={tipEdit.rating}
+                                    onChange={e => this.inputUpdate("rating", e.target.value)}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="raters" className="inputLabel"># of Raters: </label>
+                                <input
+                                    type="text"
+                                    id="raters"
+                                    name="raters"
+                                    className="rateCSS"
+                                    required
+                                    defaultValue={tipEdit.numraters}
+                                    onChange={e => this.inputUpdate("raters", e.target.value)}
+                                />
+                            </div>
+                        </div>
+                        <div className="errorBox" id="contentErrorBox">
+                            {this.state.rating.touched && <ValidationError message={rateError} />}
+                        </div>
+                        <div className="formButtonBox">
+                            <button
+                                type="submit"
+                                className="formSubmit formButton"
                             >
-                                {category.category}
-                            </option>
-                        )}
-                    </select>
-                    <br />
-                    <label htmlFor="description" className="inputLabel">Description: </label>
-                    <br />
-                    <textarea
-                        id="description"
-                        name="description"
-                        defaultValue={tipEdit.tipdescription}
-                        onChange={e => this.inputUpdate("description", e.target.value)}
-                    />
-                    <div className="errorBox" id="contentErrorBox">
-                        {this.state.description.touched && <ValidationError message={descError} />}
-                    </div>
-                    <br />
-                    <label htmlFor="directions" className="inputLabel">Directions: </label>
-                    <br />
-                    <textarea
-                        id="directions"
-                        name="directions"
-                        defaultValue={tipEdit.directions}
-                        onChange={e => this.inputUpdate("directions", e.target.value)}
-                    />
-                    <br />
-                    <label htmlFor="sourceName" className="inputLabel">Source Name: </label>
-                    <input
-                        type="text"
-                        id="sourceName"
-                        name="sourceName"
-                        className="inputEdit"
-                        required
-                        defaultValue={tipEdit.sourcetitle}
-                        onChange={e => this.inputUpdate("sourceName", e.target.value)}
-                    />
-                    <div className="errorBox" id="contentErrorBox">
-                        {this.state.sourceName.touched && <ValidationError message={sourceError} />}
-                    </div>
-                    <label htmlFor="sourceurl" className="inputLabel">Source URL: </label>
-                    <textarea
-                        type="text"
-                        id="sourceurl"
-                        name="sourceurl"
-                        className="sourceText"
-                        defaultValue={tipEdit.sourceurl}
-                        onChange={e => this.inputUpdate("sourceurl", e.target.value)}
-                    />
-                    <br />
-                    <label htmlFor="rating" className="inputLabel">Rating (0-5):  </label>
-                    <input
-                        type="text"
-                        id="rating"
-                        name="rating"
-                        className="rateCSS"
-                        required
-                        defaultValue={tipEdit.rating}
-                        onChange={e => this.inputUpdate("rating", e.target.value)}
-                    />
-                    <div className="errorBox" id="contentErrorBox">
-                        {this.state.rating.touched && <ValidationError message={rateError} />}
-                    </div>
-                    <label htmlFor="raters" className="inputLabel"># of Raters: </label>
-                    <input
-                        type="text"
-                        id="raters"
-                        name="raters"
-                        className="rateCSS"
-                        required
-                        defaultValue={tipEdit.numraters}
-                        onChange={e => this.inputUpdate("raters", e.target.value)}
-                    />
-                    <br />
-                    <div className="buttonBox">
-                        <button
-                            type="submit"
-                            className="editButton"
-                        >
-                            Save Changes
+                                Save Changes
                         </button>
-                        <NavLink
-                            className="editButton"
-                            to={`/Category/${catForTip.name}/${tipEdit.id}`}
-                        >
-                            Cancel
+                            <NavLink
+                                className="formCancel formButton"
+                                to={`/Category/${catForTip.name}/${tipEdit.id}`}
+                            >
+                                Cancel
                         </NavLink>
-                    </div>
+                        </div>
+                    </fieldset>
                 </form>
             </section>
         );
     }
 }
-
 
 EditTip.propTypes = {
     categories: PropTypes.arrayOf(

@@ -1,25 +1,33 @@
 .TipContainer {
     width: 85%;
-    margin: 20px auto;
-
+    margin: 0 auto;
+    min-height: 88vh;
+    padding-bottom: 5rem;
+    padding-top: 1rem;
 }
 
 .tipTitle {
     font-size: 2em;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 .catName {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    margin-bottom: 0.5rem;
 }
 
 .tipText {
     text-align: left;
     margin: 10px;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
-.tipDirections {
+.indent {
     text-align: left;
-    margin: 20px;
+    text-indent: 2rem;
 }
 
 .lefttext {
@@ -32,62 +40,66 @@
 
 .sourceBox {
     margin: 20px;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 .buttonBox {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0;
+    width: 100%;
 }
 
 .deleteTipButton {
     background: lightcoral;
-    border: 1px solid black;
     box-shadow: none;
     padding: 13px;
-    width: 75px;
+    margin-left: 15%;
+}
+
+.button {
+    border: 2px solid black;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
 }
 
 .editTipButton {
     background: white;
     text-decoration: none;
     color: black;
-    border: 1px solid black;
-    padding: 10px;
-    width: 80px;
+    padding: 0.65rem 1.3rem;
+}
+
+.button:hover {
+    color: white;
+    background: black;
+    border-radius: 50px;
+    border-color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.deleteTipButton:hover {
+    background:red;
 }
 
 @media only screen and (min-width: 600px) {
+    .button {
+        height: 3rem;
+        min-width: 8rem;
+    }
+
+    .editTipButton {
+        padding: 0.8rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     .tipTitle {
-        font-size: 2.5em;
+        margin-top: 1.5rem;
+
     }
     
-    .catName {
-        font-size: 2em;
-    }
 
-    .tipText{
-        font-size: 1.8em;
-    }
 
-    .lefttext {
-        margin: 0 auto;
-    }
-
-    .deleteTipButton, .editTipButton {
-        margin-top: 2rem;
-        padding: 3%;
-        width: 30%;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .deleteTipButton, .editTipButton {
-        margin: 2rem auto;
-        width: 10rem;
-        font-size: 1em;
-    }
 }

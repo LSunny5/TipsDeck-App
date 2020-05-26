@@ -11,3 +11,16 @@ test('renders learn react link', () => {
   const linkElement = getByText(/Let's/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+describe(`App component`, () => {
+	it('renders without crashing', () => {
+		const div = document.createElement('div');
+		ReactDOM.render(
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>,
+			div
+		);
+		ReactDOM.unmountComponentAtNode(div);
+	});
+});

@@ -1,125 +1,245 @@
   .editContent {
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
+    min-height: 80vh;
   }
   
-  .editForm {
+  .formBox {
     margin: 3px;
     text-align: left;
     padding: 0 20px;
     font-size: 1em;
     display: inline-block;
-    height: 100%;
+  }
+
+  fieldset {
+    margin: 3% auto 0;
+    text-align: left;
+    background: white;
+    width: 100%;
+  }
+
+  legend {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  fieldset > h2 {
+    font-size: 1.2em;
+  }
+
+  .required {
+    color: red;
+    font-size: 1.5em;
+  }
+
+  .inputLabel{
+    font-size: 0.8em;
   }
 
   .inputEdit {
-    margin: 10px;
-    border: 1px solid black;
+    margin: 3% 0 3% 2%;
+    border-radius: 30px;
+    background: #D3EFFF;
+    padding: 0.5%;
+    font-family: 'ABeeZee', sans-serif;
     font-size: 1em;
-    width: 55%;
+    width: 62%;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 10px;
   }
   
   select {
     width: 50%;
     margin: 0 0 0 15px;
+    background: #D3EFFF;
+    border-radius: 10px;
+    padding: 1% 0 1% 3%;
   }
   
   Textarea{
-    border: 1px solid black;
-    height: 12vh;
+    height: 10vh;
     width: 100%;
     font-size: 1em;
     text-align: left;
-  }
-  
-  .rateCSS {
-    width: 25%;
-    border: 1px solid black;
-    padding: 5px; 
+    background: #D3EFFF;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 3%;
   }
 
-  .buttonBox {
-    text-align: left;
-    margin-top: 10px;
+  .rateBox {
     width: 100%;
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    justify-items: space-evenly;
+    align-items: center;
+    margin-bottom: 3%;
+    justify-content: center;
+  }
+    
+  .rateCSS {
+    width: 30%;;
+    padding: 5%;
+    background: #D3EFFF;
+    border-radius: 30px;
+  }
+
+  .formButtonBox {
+    width: 100%;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 3%;
   }
   
-  .editButton {
+    /* CSS ideas from https://designmodo.com/3d-css3-button/*/
+  .formSubmit {
     border: 1px solid black;
-    box-shadow: 0;
-    padding: 0.5rem;
-    width: 40%;
-    font: 15px;
     text-decoration: none;
     color: black;
-    margin-bottom: 2rem;
+    padding: 0.4rem;
+    background: #D0FFD0;
+    -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  }
+
+  .formCancel {
+    border: 1px solid black;
+    background: white;
+    text-decoration: none;
+    color:black;
+    padding: 4%;
+    background: lightpink;
+  }
+
+  .formButton {
+    height: 2.5rem;
+    width: 40%;
+    font-size: 14px;
+    border-radius: 5px;
+    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
+    -webkit-transform: rotateX(30deg);
+    -webkit-box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+  }
+
+  .formButton:active {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  .formSubmit:hover {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    background: #3BFF3B;
+  }
+
+  .formCancel:hover {
+    text-transform: uppercase;
+    background: #FF9494;
+  }
+
+  .formSubmit:active {
+    background: green;
+  }
+
+ .formCancel:active {
+    background: red;
+  }
+
+  .formSubmit:disabled {
+    background: gray;
+  }
+
+  .formSubmit:disabled:hover {
+    text-transform: unset;
+    font-size: 14px;
   }
 
   /*for ipads and larger screen sizes*/
    @media only screen and (min-width: 600px) {
-    .editForm {
-      width: 80%;
-      margin: 1% auto;
-      padding: 0 5%;
-      font-size: 1.3em;
+    .editContent {
+      min-height: 85vh;
+    }
+    
+    .formBox {
+      width: 85%;
     }
 
-    .inputEdit {
-      padding: 1%;
-      width: 65%;
-    }
-
-    .inputLabel {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: darkblue;
-    }
-
-    Textarea{
-      height: 10vh;
-      font-size: 1.2em;
-    }
-
-    #sourceName {
-      width: 62%;
-    }
-
-    .rateCSS {
-      font-size: 1em;
-      width: 15%;
-      margin: 10px;
-    }
-
-    .editButton {
+    fieldset {
       padding: 5%;
-      height: 7vh;
-      margin: 3%;
-      width: 30%;
-      font-weight: bolder;
-      margin-bottom: 5rem;
+      margin-top: 1%;
+    }
+  
+    .inputLabel {
+      font-size: 1em;
+    }
+  
+    .inputEdit {
+      margin: 2% 0;
+      font-size: 0.8em;
+    }
+    
+    Textarea{
+      height: 9vh;
+      padding: 1.5%;
+      margin-bottom: 1%;
+    }
+      
+    .rateCSS {
+      width: 25%;
+    }
+  
+    .formButton{
+      padding: 2% 6%;
+      width: 25%;
+      height: 3.5rem;
     }
   }
   
   /*for desktops*/
   @media only screen and (min-width: 1024px) {
-    .editForm {
-      font-size: 1em;
+    fieldset {
+      padding: 1% 5%;
     }
 
-    Textarea{
-      height: 8vh;
-      font-size: 1.2em;
+    .inputEdit {
+      margin: 1% 0;
     }
 
-    .editButton {
-      padding: 2%;
-      height: 7vh;
-      margin: 2% auto;
-      width: 20%;
-      margin-bottom: 2rem;
+    #description {
+      margin-bottom: 0.5%;
+    }
+
+    #directions {
+      margin-bottom: 0;
+    }
+
+    .rateBox{
+      margin: 0;
+    }
+
+    .rateCSS {
+      padding: 3%;
+    }
+
+    .formButtonBox {
+      padding: 1% 0 1% 0;
+    }
+
+    .formButton {
+      width: 12%;
+      padding: 0;
+    }
+
+    .formCancel {
+      padding-top: 1.8%;
     }
   }
