@@ -65,6 +65,9 @@ exports[`NavBar component renders the NavBar component 1`] = `
           <div
             className="searchBar"
           >
+            <label
+              htmlFor="search"
+            />
             <input
               autoComplete="off"
               className="searchField"
