@@ -2,6 +2,7 @@
     padding: 2%;
     padding-bottom: 5rem;
     padding-top: 2.3rem;
+    min-height: 92vh;
 }
 
 .CategoryTipsBox > h1 {
