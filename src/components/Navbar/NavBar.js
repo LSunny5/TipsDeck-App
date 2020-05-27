@@ -59,7 +59,7 @@ class NavBar extends React.Component {
                         <div className="dropdown-content">
                             <div className="searchResultsBox" >
                                 <div className="searchBar" >
-                                    <label htmlFor="search" />
+                                    <label htmlFor="search">Enter search here...</label>
                                     <input
                                         type="text"
                                         autoComplete="off"
