@@ -4,68 +4,72 @@ exports[`Tip component renders the Tip form 1`] = `
 <section
   className="TipContainer"
 >
-  <h1
-    className="tipTitle"
-  />
-  <h2
-    className="catName"
-  />
-  <Rating />
   <div
-    className="tipText"
+    className="tipBackground"
   >
-    <p
-      className="bold lefttext"
-    >
-      Description: 
-    </p>
-    <p
-      className="indent"
+    <h1
+      className="tipTitle"
     />
-  </div>
-  <div
-    className="tipText"
-  >
-    <p
-      className="bold lefttext"
-    >
-      Directions: 
-    </p>
-    <p
-      className="indent"
+    <h2
+      className="catName"
     />
-  </div>
-  <div
-    className="tipText sourceBox"
-  >
-    <p
-      className="bold lefttext"
+    <Rating />
+    <div
+      className="tipText"
     >
-      Source: 
-    </p>
-    <a
-      rel="noopener noreferrer"
-      target="_blank"
-    />
-  </div>
-  <div
-    className="buttonBox"
-  >
-    <NavLink
-      className="editTipButton button"
-      to="/Category/undefined/3/editTip"
+      <p
+        className="bold lefttext"
+      >
+        Description: 
+      </p>
+      <p
+        className="indent"
+      />
+    </div>
+    <div
+      className="tipText"
     >
-      Edit
-    </NavLink>
-    <button
-      aria-label="delete tip button"
-      aria-pressed="false"
-      className="deleteTipButton button"
-      onClick={[Function]}
-      type="button"
+      <p
+        className="bold lefttext"
+      >
+        Directions: 
+      </p>
+      <p
+        className="indent"
+      />
+    </div>
+    <div
+      className="tipText sourceBox"
     >
-      Delete
-    </button>
+      <p
+        className="bold lefttext"
+      >
+        Source: 
+      </p>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+      />
+    </div>
+    <div
+      className="buttonBox"
+    >
+      <NavLink
+        className="editTipButton button"
+        to="/Category/undefined/3/editTip"
+      >
+        Edit
+      </NavLink>
+      <button
+        aria-label="delete tip button"
+        aria-pressed="false"
+        className="deleteTipButton button"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
   </div>
 </section>
 `;

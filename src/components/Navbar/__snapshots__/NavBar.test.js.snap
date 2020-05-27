@@ -3,6 +3,7 @@
 exports[`NavBar component renders the NavBar component 1`] = `
 <nav
   className="navBar"
+  onClick={[Function]}
   role="navigation"
 >
   <button
@@ -36,7 +37,7 @@ exports[`NavBar component renders the NavBar component 1`] = `
     </div>
   </NavLink>
   <div
-    className="categoryIcon"
+    className="categoryIcon searchContainer"
   >
     <div
       className="dropdown"
@@ -49,33 +50,37 @@ exports[`NavBar component renders the NavBar component 1`] = `
           className="logoImage"
           src="/images/MagnifyingIcon.png"
         />
+        <div
+          className="buttonName"
+        >
+          Search
+        </div>
       </button>
       <div
         className="dropdown-content"
       >
         <div
-          className="searchBar"
+          className="searchResultsBox"
         >
-          <input
-            autoComplete="off"
-            className="searchField"
-            name="search"
-            onChange={[Function]}
-            placeholder=" Search for tips here..."
-            type="text"
-            value=""
+          <div
+            className="searchBar"
+          >
+            <input
+              autoComplete="off"
+              className="searchField"
+              name="search"
+              onChange={[Function]}
+              placeholder=" Search for tips here..."
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="results"
+            onClick={[Function]}
           />
         </div>
-        <div
-          className="searchResultsBox"
-          onClick={[Function]}
-        />
       </div>
-    </div>
-    <div
-      className="buttonName searchWord"
-    >
-      Search
     </div>
   </div>
   <NavLink
