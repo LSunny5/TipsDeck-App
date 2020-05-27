@@ -66,12 +66,15 @@ exports[`NavBar component renders the NavBar component 1`] = `
             className="searchBar"
           >
             <label
-              htmlFor="search"
-            />
+              htmlFor="searchText"
+            >
+              Enter search here...
+            </label>
             <input
               autoComplete="off"
               className="searchField"
-              name="search"
+              id="searchText"
+              name="searchText"
               onChange={[Function]}
               placeholder=" Search for tips here..."
               type="text"

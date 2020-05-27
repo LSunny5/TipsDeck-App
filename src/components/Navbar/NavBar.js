@@ -59,13 +59,14 @@ class NavBar extends React.Component {
                         <div className="dropdown-content">
                             <div className="searchResultsBox" >
                                 <div className="searchBar" >
-                                    <label htmlFor="search">Enter search here...</label>
+                                    <label htmlFor="searchText">Enter search here...</label>
                                     <input
                                         type="text"
                                         autoComplete="off"
+                                        id="searchText"
                                         value={this.state.search}
                                         placeholder=" Search for tips here..."
-                                        name="search"
+                                        name="searchText"
                                         className="searchField"
                                         onChange={this.updateSearch.bind(this)}
                                     />

@@ -8,7 +8,7 @@
 }
 
 .notFoundTitle {
-    color: #f25107;
+    color: red;
     font-size: 2em;
     background: white;
     width: 90%;

@@ -137,7 +137,7 @@
 
   /*outer box for search field*/
   .dropdown-content {
-    top: 1rem;
+    top: 1.2rem;
     left: 3rem;
     width: 90vw;
   }
@@ -145,13 +145,13 @@
   .searchField {
     font-size: 1em;
     padding: 2%;
-    top: 0;
+    top: 1.7rem;
     bottom: auto;
   }
 
   .results {
     padding-top: 3rem;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     padding-bottom: 0;
   }
 }
@@ -211,17 +211,21 @@
     display: block;
     background-color: none;
     width: 35%;
-    top: -0.6rem;
+    top: -0.5rem;
     left: 25%;
     padding: 0;
     margin: 0;
   }
 
+  .searchBar > label {
+    display: none;
+  }
+
   .searchField{
     font-size: 1em;
     margin: 0;
-    padding: 0.7rem;
     width: 100%;
+    top: 0;
   }
   
   .searchResultsBox {
