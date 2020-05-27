@@ -1,17 +1,21 @@
 /*Page not found styling*/
 .notFound {
+    min-height: 95vh;
+    padding-bottom: 3rem;
+    padding-top: 10rem;
     width: 80%;
-    margin: 30% auto;
-    height: 100%;
+    margin: 0 auto;
 }
 
 .notFoundTitle {
     color: red;
+    font-size: 2em;
 }
 
 /*page not found message*/
 .notFoundError {
-    font-size: 2em;
+    font-size: 1.5em;
+    margin: 10%;
 }
 
 /* for tablets */
@@ -28,16 +32,7 @@
 /* for large screens */
 @media only screen and (min-width: 1024px) {
     .notFound {
-        width: 80%;
-        margin: 10% auto;
-        height: 100%;
+        min-height: 90vh;
+        padding-bottom: 3rem;
     }
-    
-    .notFoundTitle {
-        color: red;
-    }
-    
-    .notFoundError {
-        margin: 8% auto;
-    } 
 }

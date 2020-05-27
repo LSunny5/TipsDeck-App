@@ -1,10 +1,8 @@
 # TipsDeck
-
 Link to the Live App:  https://tipsdeck.now.sh/
 
 ## API
 In use with the TipsDeck API located at https://github.com/LSunny5/TipsDeck-API 
-
 
 ### Description
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,11 +12,22 @@ TipsDeck is a great place to search and view a collection of various tips and li
 ### Technologies Used
 React, Javascript, HTML5/CSS3
 
-
 ### Screenshots
 
 
+<!-- 
+![Allnotes](screenshots/NotefulSS1.png)
+![Allnotesmobile](screenshots/NotefulSS2.png)
+![Notedetails](screenshots/NotefulSS3.png)
+![AddNote](screenshots/NotefulSS4.png)
+![AddFolder](screenshots/NotefulSS5.png)
+ -->
 
+
+
+
+### Hosted on 
+Zeit
 
 #### Available Scripts
 
@@ -66,3 +75,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ##### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+#### Production Mode
+http://localhost:3000/ 

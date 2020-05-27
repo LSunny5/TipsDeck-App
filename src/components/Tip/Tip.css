@@ -1,9 +1,18 @@
 .TipContainer {
     width: 85%;
     margin: 0 auto;
-    min-height: 88vh;
+    min-height: 90vh;
     padding-bottom: 5rem;
     padding-top: 1rem;
+    padding-top: 3.5rem;
+}
+
+.tipBackground {
+    background: url(/images/lightbluebackground.jpg) no-repeat;
+    border-radius: 30px;
+    background-size: cover;
+    padding: 3% 2% 8% 2%;
+    width: 100%;
 }
 
 .tipTitle {
@@ -11,6 +20,7 @@
     margin-bottom: 0.5rem;
     word-wrap: break-word;
     word-break: normal;
+    font-family: 'Della Respira', serif;
 }
 
 .catName {
@@ -57,15 +67,13 @@
 }
 
 .button {
-    border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 30px;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
-
 }
 
 .editTipButton {
-    background: white;
+    background: lightskyblue;
     text-decoration: none;
     color: black;
     padding: 0.65rem 1.3rem;
@@ -84,6 +92,16 @@
 }
 
 @media only screen and (min-width: 600px) {
+    .TipContainer {
+        padding-bottom: 5rem;
+        min-height: 97vh;
+        padding-top: 5.8rem;
+    }
+
+    .tipBackground {
+        padding: 5% 2%;
+    }
+    
     .button {
         height: 3rem;
         min-width: 8rem;
@@ -95,11 +113,17 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    .tipTitle {
-        margin-top: 1.5rem;
+    .TipContainer{
+        min-height: 92vh;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+      }
 
+    .tipBackground  {
+        padding: 3% 2%;
     }
     
-
-
+    .tipTitle {
+        margin-top: 0;
+    }
 }

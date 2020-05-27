@@ -5,6 +5,7 @@ import { shuffleArray} from '../../TipsDeckHelpers';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+/* component for the Random page */
 class Random extends React.Component {
     static contextType = TipsDeckContext;
 

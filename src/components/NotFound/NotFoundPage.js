@@ -1,6 +1,7 @@
 import React from 'react';
 import './NotFoundPage.css';
 
+//Any urls that do not match the routes will be redirected to this component
 class NotFoundPage extends React.Component {
     render() {
         return (

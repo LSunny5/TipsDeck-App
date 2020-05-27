@@ -9,19 +9,22 @@
 
 .cardName {
     font-size: 18px;
-    padding: 15px;
-    border: 2px solid black;
-    margin: 5px;
+    padding: 1rem;
+    margin: 0.5rem auto;
     width: 95%;
-    background: lightblue;
+    background: #82CAFF;
     border-radius: 30px;
+    color: black;
+    font-weight: bold;
 }
 
 /* for tablets */
 @media only screen and (min-width: 600px) {
     .cardName {
         padding: 1.8rem;
+        margin: 1rem auto;
     }
+    
 }
 
 /* for large screens */

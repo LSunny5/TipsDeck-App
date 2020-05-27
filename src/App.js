@@ -155,7 +155,6 @@ class App extends React.Component {
             {this.renderMainRoutes()}
           </div>
 
-
           <div className="footerBox">
             {this.renderFooterRoutes()}
           </div>

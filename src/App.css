@@ -17,14 +17,6 @@ main {
     font-family: 'ABeeZee', sans-serif;
 }
 
-/*Container for footer*/
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left:0;
-}
-
 .content {
     background: url(/images/white-and-blue-waves.jpg) no-repeat center center fixed;
     min-height: 85vh;

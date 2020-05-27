@@ -1,3 +1,5 @@
+/* Helper functions for the TipsDeck react client */
+
 //Find all tips related to the Category
 export const getTips = (tips = [], categoryId) => (
     (!categoryId)

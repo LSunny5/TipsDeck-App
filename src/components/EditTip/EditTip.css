@@ -1,6 +1,7 @@
   .editContent {
-    padding-bottom: 4rem;
-    min-height: 80vh;
+    padding-bottom: 5.5rem;
+    min-height: 88vh;
+    padding-top: 2.7rem;
   }
   
   .formBox {
@@ -16,6 +17,7 @@
     text-align: left;
     background: white;
     width: 100%;
+    border-radius: 30px;
   }
 
   legend {
@@ -100,9 +102,6 @@
     color: black;
     padding: 0.4rem;
     background: #D0FFD0;
-    -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-    -moz-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
   }
 
   .formCancel {
@@ -118,12 +117,7 @@
     height: 2.5rem;
     width: 40%;
     font-size: 14px;
-    border-radius: 5px;
-    text-shadow: 0px  -1px 0px rgba(0,0,0,.5);
-    -webkit-transform: rotateX(30deg);
-    -webkit-box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-    -moz-box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
-    box-shadow: 0px 6px 0px darkslategray, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    border-radius: 30px;
   }
 
   .formButton:active {
@@ -166,7 +160,9 @@
   /*for ipads and larger screen sizes*/
    @media only screen and (min-width: 600px) {
     .editContent {
-      min-height: 85vh;
+      padding-bottom: 5rem;
+      min-height: 97vh;
+      padding-top: 5.8rem;
     }
     
     .formBox {
@@ -206,6 +202,12 @@
   
   /*for desktops*/
   @media only screen and (min-width: 1024px) {
+    .editContent{
+      min-height: 92vh;
+      padding-top: 0.2rem;
+      padding-bottom: 4rem;
+    }
+
     fieldset {
       padding: 1% 5%;
     }
@@ -240,6 +242,7 @@
     }
 
     .formCancel {
-      padding-top: 1.8%;
+      vertical-align: middle;
+      padding: 0;
     }
   }

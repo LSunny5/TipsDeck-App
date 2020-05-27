@@ -7,6 +7,7 @@ import Rating from '../Rating/Rating';
 import PropTypes from 'prop-types';
 import config from '../../config';
 
+//component for displaying a single tip
 class Tip extends React.Component {
     static contextType = TipsDeckContext;
 
@@ -47,47 +48,49 @@ class Tip extends React.Component {
 
         return (
             <section className="TipContainer">
-                <h1 className="tipTitle">{targetTip.tipname}</h1>
-                <h2 className="catName">{cat.category}</h2>
+                <div className="tipBackground">
+                    <h1 className="tipTitle">{targetTip.tipname}</h1>
+                    <h2 className="catName">{cat.category}</h2>
 
-                <Rating value={targetTip.rating} />
+                    <Rating value={targetTip.rating} />
 
-                <div className="tipText">
-                    <p className="bold lefttext">Description: </p>
-                    <p className="indent">{targetTip.tipdescription}</p>
-                </div>
-                <div className="tipText">
-                    <p className="bold lefttext">Directions: </p>
-                    <p className="indent">{targetTip.directions}</p>
-                </div>
-                <div className="tipText sourceBox">
-                    <p className="bold lefttext">Source: </p>
-                    <a target='_blank' rel="noopener noreferrer" href={targetTip.sourceurl}>
-                        {targetTip.sourcetitle}
-                    </a>
-                </div>
+                    <div className="tipText">
+                        <p className="bold lefttext">Description: </p>
+                        <p className="indent">{targetTip.tipdescription}</p>
+                    </div>
+                    <div className="tipText">
+                        <p className="bold lefttext">Directions: </p>
+                        <p className="indent">{targetTip.directions}</p>
+                    </div>
+                    <div className="tipText sourceBox">
+                        <p className="bold lefttext">Source: </p>
+                        <a target='_blank' rel="noopener noreferrer" href={targetTip.sourceurl}>
+                            {targetTip.sourcetitle}
+                        </a>
+                    </div>
 
-                <div className="buttonBox">
-                    <NavLink
-                        className="editTipButton button"
-                        to={`/Category/${cat.category}/${id}/editTip`}
-                    >
-                        Edit
-                    </NavLink>
+                    <div className="buttonBox">
+                        <NavLink
+                            className="editTipButton button"
+                            to={`/Category/${cat.category}/${id}/editTip`}
+                        >
+                            Edit
+                        </NavLink>
 
-                    <button
-                        className="deleteTipButton button"
-                        type='button'
-                        onClick={() => {
-                            if (window.confirm('Are you sure you wish to delete the tip?') ?
-                                this.handleClickDelete(cat.category) : this.handleClickCancel())
-                                this.handleClickCancel()
-                        }}
-                        aria-pressed='false'
-                        aria-label='delete tip button'
-                    >
-                        Delete
-                    </button>
+                        <button
+                            className="deleteTipButton button"
+                            type='button'
+                            onClick={() => {
+                                if (window.confirm('Are you sure you wish to delete the tip?') ?
+                                    this.handleClickDelete(cat.category) : this.handleClickCancel())
+                                    this.handleClickCancel()
+                            }}
+                            aria-pressed='false'
+                            aria-label='delete tip button'
+                        >
+                            Delete
+                        </button>
+                    </div>
                 </div>
             </section>
         );

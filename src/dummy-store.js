@@ -1,3 +1,4 @@
+/* dummy file used for test purposes on preliminary design and creation of react app */
 export default {
     "categories": [
         {

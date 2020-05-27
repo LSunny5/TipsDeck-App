@@ -1,7 +1,9 @@
 .AddTipContent{
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 4rem;
+    padding-bottom: 5.5rem;
+    min-height: 88vh;
+    padding-top: 2.7rem;
 }
 
 .wide {
@@ -10,6 +12,12 @@
 
  /*for ipads and larger screen sizes*/
  @media only screen and (min-width: 600px) {
+    .AddTipContent {
+        padding-bottom: 5rem;
+        min-height: 97vh;
+        padding-top: 5.8rem;
+    }
+
     .formCancel {
         padding-top: 4%;
     }
@@ -17,6 +25,11 @@
 
  /*for desktops*/
  @media only screen and (min-width: 1024px) {
+    .AddTipContent {
+        min-height: 92vh;
+        padding-top: 0.2rem;
+    }
+
     .formCancel {
         padding-top: 2%;
     }

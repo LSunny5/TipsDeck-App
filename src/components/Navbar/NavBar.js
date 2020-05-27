@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import TipsDeckContext from '../../TipsDeckContext';
 import Tipcard from '../TipCard/Tipcard'
 
+//Header and navigation bar component and css
 class NavBar extends React.Component {
     static contextType = TipsDeckContext;
     constructor() {
@@ -15,11 +16,11 @@ class NavBar extends React.Component {
     }
 
     updateSearch(event) {
-        this.setState({ search: event.target.value.substr(0, 20) });    
+        this.setState({ search: event.target.value.substr(0, 20) });
     }
-    
+
     handleClick = () => {
-        this.setState({ search: '' }); 
+        this.setState({ search: '' });
     }
 
     render() {
@@ -36,7 +37,7 @@ class NavBar extends React.Component {
         }
 
         return (
-            <nav role="navigation" className="navBar">
+            <nav role="navigation" className="navBar" onClick={this.handleClick}>
                 <button
                     className="categoryIcon backButton"
                     onClick={() => this.props.history.goBack()}>
@@ -49,24 +50,26 @@ class NavBar extends React.Component {
                     <img src="/images/CategoriesIcon.png" alt="Categories Icon" className="logoImage" />
                     <div className="buttonName">Categories</div>
                 </NavLink>
-                <div className="categoryIcon">
+                <div className="categoryIcon searchContainer">
                     <div className="dropdown" >
                         <button className="dropButton">
                             <img alt="Search Logo" src="/images/MagnifyingIcon.png" className="logoImage" />
+                            <div className="buttonName">Search</div>
                         </button>
                         <div className="dropdown-content">
-                            <div className="searchBar">
-                                <input
-                                    type="text"
-                                    autoComplete="off"
-                                    value={this.state.search}
-                                    placeholder=" Search for tips here..."
-                                    name="search"
-                                    className="searchField"
-                                    onChange={this.updateSearch.bind(this)}
-                                />
-                            </div>
-                            <div className="searchResultsBox" onClick={this.handleClick}>
+                            <div className="searchResultsBox" >
+                                <div className="searchBar" >
+                                    <input
+                                        type="text"
+                                        autoComplete="off"
+                                        value={this.state.search}
+                                        placeholder=" Search for tips here..."
+                                        name="search"
+                                        className="searchField"
+                                        onChange={this.updateSearch.bind(this)}
+                                    />
+                                </div>
+                                <div className = "results" onClick={this.handleClick}>
                                 {filteredTips.map((tip) => {
                                     return (
                                         <Tipcard
@@ -78,10 +81,10 @@ class NavBar extends React.Component {
                                     )
                                 })
                                 }
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="buttonName searchWord">Search</div>
                 </div>
                 <NavLink
                     className="categoryIcon randomIcon"

@@ -1,5 +1,7 @@
 .Categories {
     padding-bottom: 3rem;
+    min-height: 88vh;
+    padding-top: 2.2rem;
 }
 
 .Categories > h1 {
@@ -34,9 +36,13 @@
     background-position: 0%;
     background-image: -webkit-linear-gradient(30deg, white 50%, transparent 50%);
     background-image: linear-gradient(30deg, white 50%, transparent 50%);
-    background-size: 1000px;
+    background-size: 2000px;
     -webkit-transition: 500ms ease-in-out;
     transition: 500ms ease-in-out;
+    border-top: 3px solid #DCE8F2;
+    border-right: 3px solid darkslategray;
+    border-bottom: 3px solid darkslategray;
+    border-left: 3px solid #DCE8F2;
 }
 
 .categoryButton:hover {
@@ -48,12 +54,12 @@
 .categoryName {
     text-decoration: none;
     width: 70vw;
-    padding: 1.5% 3%;
 }
 
 .categoryName:hover {
     background-color: #D9AB73;
     border-radius: 30px;
+    padding: 0 1%;
 }
 
 .categoryName:active {
@@ -62,6 +68,12 @@
 
 /* for tablets */
 @media only screen and (min-width: 600px) { 
+    .Categories {
+        padding-bottom: 5rem;
+        min-height: 97vh;
+        padding-top: 4.5em;
+    }
+
     .Categories > h1 {
         font-size: 1.8em;
     }
@@ -92,6 +104,11 @@
 
 /* for large screens */
 @media only screen and (min-width: 1024px) {
+    .Categories {
+        min-height: 92vh;
+        padding-top: 1rem;
+    }
+
     .Categories > h1 {
         padding: 1%;
     }
@@ -102,11 +119,6 @@
 
     .categoryBox {
         margin-top: 1rem;
-    }
-    
-    
-    .Categories{
-        min-height: 87vh;
     }
 
     .categoryButton {

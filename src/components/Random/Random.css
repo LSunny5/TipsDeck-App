@@ -1,6 +1,7 @@
 .RandomContent {
     margin: 0;
     padding-bottom: 5rem;
+    padding-top: 2.3rem;
 }
 
 .RandomContent > h1 {
@@ -11,9 +12,10 @@
 
   /*for ipads and larger screen sizes*/
   @media only screen and (min-width: 600px) {
-    .RandomContent{
-        width: 95%;
-        margin: 0 auto;
+    .RandomContent {
+      padding-bottom: 5rem;
+      min-height: 97vh;
+      padding-top: 5.8rem;
     }
     
     .RandomContent > h1 {
@@ -23,8 +25,9 @@
 
       /*for desktops*/
   @media only screen and (min-width: 1024px) {
-    .RandomContent {
-        width: 90%;
-        margin: 0 auto;
+    .RandomContent{
+      min-height: 92vh;
+      padding-top: 1rem;
+      padding-bottom: 4rem;
     }
   }

@@ -5,6 +5,7 @@ import TipsDeckContext from '../../TipsDeckContext'
 import { getCategoryName } from '../../TipsDeckHelpers';
 import PropTypes from 'prop-types';
 
+//component that gets called for each of the search results that returns a card with the name
 class Tipcard extends React.Component {
     static contextType = TipsDeckContext;
 
