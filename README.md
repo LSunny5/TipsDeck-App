@@ -13,18 +13,12 @@ TipsDeck is a great place to search and view a collection of various tips and li
 React, Javascript, HTML5/CSS3
 
 ### Screenshots
-
-
-<!-- 
-![Allnotes](screenshots/NotefulSS1.png)
-![Allnotesmobile](screenshots/NotefulSS2.png)
-![Notedetails](screenshots/NotefulSS3.png)
-![AddNote](screenshots/NotefulSS4.png)
-![AddFolder](screenshots/NotefulSS5.png)
- -->
-
-
-
+![Landing Desktop](screenshots/Desktop.png)
+![Landing Mobile](screenshots/TipsDeckMobileLanding.png)
+![Category Tips Desktop](screenshots/CategoryTipsLarge.png)
+![Category Tips Mobile](screenshots/MobileCategoryTips.png)
+![Edit Tip Desktop](screenshots/EditTipLarge.png)
+![Edit Tip Mobile](screenshots/EditTipMobile.png)
 
 ### Hosted on 
 Zeit
